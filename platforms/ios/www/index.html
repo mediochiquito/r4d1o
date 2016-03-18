@@ -28,8 +28,8 @@
         * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!--<meta http-equiv="Content-Security-Policy"-->
+          <!--content="default-src 'self' http://74.50.111.38 data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
@@ -42,6 +42,8 @@
 
     <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/libs/jquery.transit.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/libs/id3-minimized.js"></script>
+
     <script type="text/javascript" charset="utf-8" src="js/com/utils/Boton.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/com/secciones/Base_Seccion.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/com/secciones/Secciones.js"></script>
@@ -61,7 +63,7 @@
     <div id='secciones'>
 
         <div id="SeccionHome" class='seccion'>
-
+            <div id="buffer"></div>
             <div id="btn-empezar" class="btn" data-btn-fx="zoom">EMPEZAR</div>
 
         </div>

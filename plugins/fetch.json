@@ -7,10 +7,11 @@
         "is_top_level": true,
         "variables": {}
     },
-    "nl.kingsquare.cordova.background-audio": {
+    "org.nypr.cordova.playerhaterplugin": {
         "source": {
-            "type": "registry",
-            "id": "nl.kingsquare.cordova.background-audio"
+            "type": "git",
+            "url": "https://github.com/wnyc/cordova-plugin-playerhater.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

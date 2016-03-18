@@ -28,8 +28,8 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="BackgroundAudio">
-        <param name="ios-package" onload="true" value="BackgroundAudio" />
+    <feature name="AudioPlayerPlugin">
+        <param name="ios-package" value="PRXPlayerPlugin" />
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="itms:*" />

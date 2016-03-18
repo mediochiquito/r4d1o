@@ -15,7 +15,18 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
-		B30009C39E944729B18441DF /* BackgroundAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 178B99139CF14A94A9064293 /* BackgroundAudio.m */; };
+		7C08A09AD3AC4F8AB37F1C2E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0D9C6524674CBAAB8F9A41 /* MediaPlayer.framework */; };
+		09D7376C3ACB4F99B012FAC4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BE9A1EF2EC48E3917DF3DA /* AudioToolbox.framework */; };
+		9994C8B313614A4CA6DC98F3 /* PRXPlayerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 57434C34CDDE4A26927ED564 /* PRXPlayerPlugin.m */; };
+		6B1C980FCCEF4896B48B0E92 /* AudioStreamHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FEEC50B738C141E49744220A /* AudioStreamHandler.m */; };
+		1EC738E150584F2FAC932BCA /* PRXPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC0523CE89F45F2A9600514 /* PRXPlayer.m */; };
+		E6B3BF937FA4433D823D6710 /* PRXPlayerQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EF257443AC8441588257EE9E /* PRXPlayerQueue.m */; };
+		8FC57472F32B439D900EA5CD /* PRXQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D650DF6A8CD48DF96FD6441 /* PRXQueuePlayer.m */; };
+		EFEA8018D4FA4BF1911BB172 /* ReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FCC39C2A954A82A0D0CAFA /* ReachabilityManager.m */; };
+		18CF45C0209A424B83198D1D /* NYPROnDemand.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE67789F7A4B518BBAAB1C /* NYPROnDemand.m */; };
+		00677D1D4C624AD08953D228 /* NYPRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEE92BED9B043279277B520 /* NYPRPlayer.m */; };
+		F85C8D42B6134C91BDF0A40F /* NYPRStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 2052D30769894341A1E4AF5F /* NYPRStream.m */; };
+		EF958E79EF9A48D8ABB4DC5F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D46B5483BAB410D8086DAE7 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +66,29 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = TataRadio/config.xml; sourceTree = "<group>"; };
-		178B99139CF14A94A9064293 /* BackgroundAudio.m */ = {isa = PBXFileReference; name = "BackgroundAudio.m"; path = "nl.kingsquare.cordova.background-audio/BackgroundAudio.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7F0D9C6524674CBAAB8F9A41 /* MediaPlayer.framework */ = {isa = PBXFileReference; name = "MediaPlayer.framework"; path = "System/Library/Frameworks/MediaPlayer.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		33BE9A1EF2EC48E3917DF3DA /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		57434C34CDDE4A26927ED564 /* PRXPlayerPlugin.m */ = {isa = PBXFileReference; name = "PRXPlayerPlugin.m"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayerPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FEEC50B738C141E49744220A /* AudioStreamHandler.m */ = {isa = PBXFileReference; name = "AudioStreamHandler.m"; path = "org.nypr.cordova.playerhaterplugin/AudioStreamHandler.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EDC0523CE89F45F2A9600514 /* PRXPlayer.m */ = {isa = PBXFileReference; name = "PRXPlayer.m"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EF257443AC8441588257EE9E /* PRXPlayerQueue.m */ = {isa = PBXFileReference; name = "PRXPlayerQueue.m"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayerQueue.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D650DF6A8CD48DF96FD6441 /* PRXQueuePlayer.m */ = {isa = PBXFileReference; name = "PRXQueuePlayer.m"; path = "org.nypr.cordova.playerhaterplugin/PRXQueuePlayer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		99FCC39C2A954A82A0D0CAFA /* ReachabilityManager.m */ = {isa = PBXFileReference; name = "ReachabilityManager.m"; path = "org.nypr.cordova.playerhaterplugin/ReachabilityManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		06FE67789F7A4B518BBAAB1C /* NYPROnDemand.m */ = {isa = PBXFileReference; name = "NYPROnDemand.m"; path = "org.nypr.cordova.playerhaterplugin/NYPROnDemand.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8FEE92BED9B043279277B520 /* NYPRPlayer.m */ = {isa = PBXFileReference; name = "NYPRPlayer.m"; path = "org.nypr.cordova.playerhaterplugin/NYPRPlayer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		2052D30769894341A1E4AF5F /* NYPRStream.m */ = {isa = PBXFileReference; name = "NYPRStream.m"; path = "org.nypr.cordova.playerhaterplugin/NYPRStream.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1D46B5483BAB410D8086DAE7 /* Reachability.m */ = {isa = PBXFileReference; name = "Reachability.m"; path = "org.nypr.cordova.playerhaterplugin/Reachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E4B8FEBE08E143B59E613218 /* PRXPlayerPlugin.h */ = {isa = PBXFileReference; name = "PRXPlayerPlugin.h"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayerPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		A8377367B6144ECD9A614CB2 /* AudioStreamHandler.h */ = {isa = PBXFileReference; name = "AudioStreamHandler.h"; path = "org.nypr.cordova.playerhaterplugin/AudioStreamHandler.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E5D51264D7BF4274980E9DFF /* PRXPlayer.h */ = {isa = PBXFileReference; name = "PRXPlayer.h"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		117FDD8F8677438E88880138 /* PRXPlayerQueue.h */ = {isa = PBXFileReference; name = "PRXPlayerQueue.h"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayerQueue.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DF8DF00E63B34AC3A8ADE75F /* PRXPlayer_private.h */ = {isa = PBXFileReference; name = "PRXPlayer_private.h"; path = "org.nypr.cordova.playerhaterplugin/PRXPlayer_private.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2F17B3DD135C42ECB18F0B30 /* PRXQueuePlayer.h */ = {isa = PBXFileReference; name = "PRXQueuePlayer.h"; path = "org.nypr.cordova.playerhaterplugin/PRXQueuePlayer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		ABFB898500DF4E21A88FB3C7 /* ReachabilityManager.h */ = {isa = PBXFileReference; name = "ReachabilityManager.h"; path = "org.nypr.cordova.playerhaterplugin/ReachabilityManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		90736FE8585242F09FE48E27 /* NYPROnDemand.h */ = {isa = PBXFileReference; name = "NYPROnDemand.h"; path = "org.nypr.cordova.playerhaterplugin/NYPROnDemand.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1174B83BD141445DB4F33B61 /* NYPRPlayer.h */ = {isa = PBXFileReference; name = "NYPRPlayer.h"; path = "org.nypr.cordova.playerhaterplugin/NYPRPlayer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		ECB5555F9B774712A8398D11 /* NYPRStream.h */ = {isa = PBXFileReference; name = "NYPRStream.h"; path = "org.nypr.cordova.playerhaterplugin/NYPRStream.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B25D2C6C92744F9591F48612 /* Reachability.h */ = {isa = PBXFileReference; name = "Reachability.h"; path = "org.nypr.cordova.playerhaterplugin/Reachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +97,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				7C08A09AD3AC4F8AB37F1C2E /* MediaPlayer.framework in Frameworks */,
+				09D7376C3ACB4F99B012FAC4 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +168,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7F0D9C6524674CBAAB8F9A41 /* MediaPlayer.framework */,
+				33BE9A1EF2EC48E3917DF3DA /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,7 +195,27 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				178B99139CF14A94A9064293 /* BackgroundAudio.m */,
+				57434C34CDDE4A26927ED564 /* PRXPlayerPlugin.m */,
+				FEEC50B738C141E49744220A /* AudioStreamHandler.m */,
+				EDC0523CE89F45F2A9600514 /* PRXPlayer.m */,
+				EF257443AC8441588257EE9E /* PRXPlayerQueue.m */,
+				9D650DF6A8CD48DF96FD6441 /* PRXQueuePlayer.m */,
+				99FCC39C2A954A82A0D0CAFA /* ReachabilityManager.m */,
+				06FE67789F7A4B518BBAAB1C /* NYPROnDemand.m */,
+				8FEE92BED9B043279277B520 /* NYPRPlayer.m */,
+				2052D30769894341A1E4AF5F /* NYPRStream.m */,
+				1D46B5483BAB410D8086DAE7 /* Reachability.m */,
+				E4B8FEBE08E143B59E613218 /* PRXPlayerPlugin.h */,
+				A8377367B6144ECD9A614CB2 /* AudioStreamHandler.h */,
+				E5D51264D7BF4274980E9DFF /* PRXPlayer.h */,
+				117FDD8F8677438E88880138 /* PRXPlayerQueue.h */,
+				DF8DF00E63B34AC3A8ADE75F /* PRXPlayer_private.h */,
+				2F17B3DD135C42ECB18F0B30 /* PRXQueuePlayer.h */,
+				ABFB898500DF4E21A88FB3C7 /* ReachabilityManager.h */,
+				90736FE8585242F09FE48E27 /* NYPROnDemand.h */,
+				1174B83BD141445DB4F33B61 /* NYPRPlayer.h */,
+				ECB5555F9B774712A8398D11 /* NYPRStream.h */,
+				B25D2C6C92744F9591F48612 /* Reachability.h */,
 			);
 			name = Plugins;
 			path = TataRadio/Plugins;
@@ -276,7 +333,16 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				B30009C39E944729B18441DF /* BackgroundAudio.m in Sources */,
+				9994C8B313614A4CA6DC98F3 /* PRXPlayerPlugin.m in Sources */,
+				6B1C980FCCEF4896B48B0E92 /* AudioStreamHandler.m in Sources */,
+				1EC738E150584F2FAC932BCA /* PRXPlayer.m in Sources */,
+				E6B3BF937FA4433D823D6710 /* PRXPlayerQueue.m in Sources */,
+				8FC57472F32B439D900EA5CD /* PRXQueuePlayer.m in Sources */,
+				EFEA8018D4FA4BF1911BB172 /* ReachabilityManager.m in Sources */,
+				18CF45C0209A424B83198D1D /* NYPROnDemand.m in Sources */,
+				00677D1D4C624AD08953D228 /* NYPRPlayer.m in Sources */,
+				F85C8D42B6134C91BDF0A40F /* NYPRStream.m in Sources */,
+				EF958E79EF9A48D8ABB4DC5F /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
