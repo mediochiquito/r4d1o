@@ -6,6 +6,8 @@ function App() {
     this.toastmessage = null;
     this.loading = null;
     this.esCordova = false;
+    this.SREVER = 'http://192.168.235.140/r4d1o/server/';
+
 
     this.initialize = function ($esCordova) {
 

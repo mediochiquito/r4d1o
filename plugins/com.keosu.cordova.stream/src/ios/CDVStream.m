@@ -24,20 +24,20 @@ under the License.
 @synthesize objAVPlayer;
 
 - (void)create:(CDVInvokedUrlCommand*)command
-{
-	[self.commandDelegate runInBackground:^{
-    	CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-    	[self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
-    }];
+ {
+ 	[self.commandDelegate runInBackground:^{
+     	CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+     	[self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
+     }];
 
-}
-
+ }
 - (void)startPlayingAudio:(CDVInvokedUrlCommand*)command
 {
 	[self.commandDelegate runInBackground:^{
     	NSString* resourcePath = [command.arguments objectAtIndex:1];
     	NSURL* resourceURL = [NSURL URLWithString:resourcePath];
     	NSLog(@"Now Playing '%@'", resourcePath);
+    	NSLog(@"Now Playing2 '%@'", resourcePath);
     	if([self objAVPlayer] == nil){
     		[self setObjAVPlayer:[[AVPlayer alloc] initWithURL:resourceURL]];
 			[[self objAVPlayer] addObserver:self forKeyPath:@"status" options:0 context:nil];

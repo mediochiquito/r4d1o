@@ -31,6 +31,8 @@ function SeccionHome() {
         RemoteCommand.on('play', iniciarRadio)
         RemoteCommand.on('pause', detenerRadio);
 
+        //stream = new Stream(url_stream, onSuccess, onError);
+        stream = new Audio(url_stream, onSuccess, onError);
     }
 
 
@@ -45,38 +47,13 @@ function SeccionHome() {
         buffereando = false;
     }
 
-    function detenerRadio() {
-
-        ecuchando = false;
-        buffereando = false;
-        $('#home-btn-play-pause').addClass("enpausa");
-
-        if (app.esCordova && device.platform == "iOS") {
-            stream.stop();
-
-        }
-
-        if (app.esCordova && device.platform == "Android") {
-            navigator.RADIO.stop(function (s) {
-                console.log('SUCCESS navigator.RADIO.stop');
-            }, function (s) {
-                console.log('ERROR navigator.RADIO.stop');
-            });
-        }
-
-        if (!app.esCordova) {
-
-            stream.pause();
-        }
-
-    }
 
     function consultar_cancion_actual() {
 
 
         $.ajax({
                 method: "GET",
-                url: "http://192.168.0.3/r4d1o/server/currentSong.php",
+                url: app.SERVER + "currentSong.php",
                 cache: false
             })
             .done(function (msg) {
@@ -105,13 +82,48 @@ function SeccionHome() {
         if (app.esCordova && device.platform == "iOS") {
 
             NowPlaying.set({
-                artwork: "img/art.jpg",
+                artwork:  app.SERVER + 'img/art.jpg',
                 albumTitle: array_artita_cancion[0],
                 artist: array_artita_cancion[1],
                 title: "Super Radio Ta-ta"
+
             });
 
         }
+    }
+    function detenerRadio() {
+
+        ecuchando = false;
+        buffereando = false;
+        $('#home-btn-play-pause').addClass("enpausa");
+
+        if (app.esCordova && device.platform == "iOS") {
+            ///stream.stop();
+            stream.pause();
+
+            NowPlaying.set({
+                artwork:  app.SERVER + 'img/art.jpg',
+                albumTitle: "",
+                artist: '',
+                title: "Super Radio Ta-ta"
+
+            });
+
+        }
+
+        if (app.esCordova && device.platform == "Android") {
+            navigator.RADIO.stop(function (s) {
+                console.log('SUCCESS navigator.RADIO.stop');
+            }, function (s) {
+                console.log('ERROR navigator.RADIO.stop');
+            });
+        }
+
+        if (!app.esCordova) {
+
+            stream.pause();
+        }
+
     }
 
 
@@ -123,10 +135,18 @@ function SeccionHome() {
 
         $('#home-btn-play-pause').removeClass("enpausa");
 
+
         //ios
         if (app.esCordova && device.platform == "iOS") {
-            stream = new Stream(url_stream, onSuccess, onError);
-            stream.play();
+            stream.load()
+            stream.play()
+            NowPlaying.set({
+                artwork:  app.SERVER + 'img/art.jpg',
+                albumTitle: "Cargando...",
+                artist: '',
+                title: "Super Radio Ta-ta"
+            });
+          //  stream.play();
         }
 
         //android
@@ -149,22 +169,6 @@ function SeccionHome() {
 
     }
 
-    /* function loop(audio) {
-     try {
-     var buffered = audio.buffered;
-     var loaded;
-     var played;
-
-     if (buffered.length) {
-     loaded = 100 * buffered.end(0) / audio.duration;
-     played = 100 * audio.currentTime / audio.duration;
-     $('#buffer').html(loaded.toFixed(2) + ' - ' + played.toFixed(2));
-
-     }
-     } catch (e) {
-     }
-     setTimeout(loop, 50);
-     }*/
 
     this._set = function (data) {
 

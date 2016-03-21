@@ -5,8 +5,8 @@ function Secciones(){
 	this._SeccionHome = new SeccionHome();
 	this._SeccionHome.ocultar(0);
 
-	//this._SeccionSexo = new SeccionSexo();
-	//this._SeccionSexo.ocultar(0);
+	this._SeccionInfo = new SeccionInfo();
+	this._SeccionInfo.ocultar(0);
     //
 	//this._SeccionPajita = new SeccionPajita();
 	//this._SeccionPajita.ocultar(0);

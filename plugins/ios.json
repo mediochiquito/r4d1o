@@ -22,9 +22,6 @@
         "com.keosu.cordova.stream": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-streaming": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.tata.radio"
         },
@@ -41,6 +38,12 @@
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "nl.x-services.plugins.backgroundaudio": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-file": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },

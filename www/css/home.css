@@ -5,7 +5,7 @@
 }
 #home-btn-play-pause {
     position: relative;
-    #/* home-btn-play-pause (background) color */
+
     border: none;
     outline:none;
     height: 100px;
@@ -24,7 +24,7 @@
 }
 #home-btn-play-pause.enpausa{background-position: 10px -110px;}
 
-#home-play-pause {background-color: #A40080;position: relative;width: 100px;height: 100px;margin: 0 auto;border: solid 5px #fff;border-radius: 50px;overflow: hidden;}
+#home-play-pause {background-color: #A40080;position: relative;width: 100px;height: 100px;margin: 0 auto;border: solid 5px #fff;border-radius: 50px; overflow: hidden; }
 
 #home-txt-artista {
     font-family: 'roboto-bold-webfont';
@@ -41,3 +41,31 @@
     margin: 2px auto 0;
     width: 80%;
 }
+
+#home-menu-nav {
+    position: absolute;
+    bottom: 30px;
+    width: 260px;
+    background-color: rgba(116,13,126,0.6);
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -130px;
+    border: solid 3px rgba(255, 255, 255, 0.27);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.home-btn-nav {width: 79px;height: 50px;/* background-color: black; */display: inline-block;}
+
+#home-menu-nav .home-btn-nav > img {width: 30px;margin-top: 10px;}
+#home-btn-info{
+
+}
+#home-btn-fav{
+
+}
+#home-btn-email{
+
+}
+

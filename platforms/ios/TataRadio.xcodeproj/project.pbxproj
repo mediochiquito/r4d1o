@@ -34,6 +34,10 @@
 		9C8D8131272343F6B01E90A4 /* Toast+UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7261F426540929A983DE4 /* Toast+UIView.m */; };
 		9EAB0FDCDE02463990C6DB0A /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0E1B3A50E2469F96B517A4 /* Toast.m */; };
 		E4C6BD71703E4972A42FB308 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91F8216B1A74F86BC56B7A1 /* QuartzCore.framework */; };
+		CDA0EDA28D5C4B479C4A8995 /* BackgroundAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 06B0AEB04A084A7784188388 /* BackgroundAudio.m */; };
+		D53D7EF9942047F1A04CB80A /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 305BF243095940B4A3659120 /* CDVFile.m */; };
+		3BA73536DE664B809BC8EFCD /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BDB5664B0148BA9848474C /* CDVLocalFilesystem.m */; };
+		1E2392C6EEF74BC2ACAF6975 /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A6FB3AC6BD804586B1ABE6B2 /* CDVAssetLibraryFilesystem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,14 @@
 		DE3D8443E12645029EF8A398 /* Toast+UIView.h */ = {isa = PBXFileReference; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		6A002D80DA9047E0ACC61424 /* Toast.h */ = {isa = PBXFileReference; name = "Toast.h"; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		A91F8216B1A74F86BC56B7A1 /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		06B0AEB04A084A7784188388 /* BackgroundAudio.m */ = {isa = PBXFileReference; name = "BackgroundAudio.m"; path = "nl.x-services.plugins.backgroundaudio/BackgroundAudio.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B4860ADBDE2640AE8C03FCE3 /* BackgroundAudio.h */ = {isa = PBXFileReference; name = "BackgroundAudio.h"; path = "nl.x-services.plugins.backgroundaudio/BackgroundAudio.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		305BF243095940B4A3659120 /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B8BDB5664B0148BA9848474C /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A6FB3AC6BD804586B1ABE6B2 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7652AE66ABF542A6827447EF /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9AD333D42F5046B38B9D3E68 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9906D04B05F74E7795C01FFD /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +257,14 @@
 				BE0E1B3A50E2469F96B517A4 /* Toast.m */,
 				DE3D8443E12645029EF8A398 /* Toast+UIView.h */,
 				6A002D80DA9047E0ACC61424 /* Toast.h */,
+				06B0AEB04A084A7784188388 /* BackgroundAudio.m */,
+				B4860ADBDE2640AE8C03FCE3 /* BackgroundAudio.h */,
+				305BF243095940B4A3659120 /* CDVFile.m */,
+				B8BDB5664B0148BA9848474C /* CDVLocalFilesystem.m */,
+				A6FB3AC6BD804586B1ABE6B2 /* CDVAssetLibraryFilesystem.m */,
+				7652AE66ABF542A6827447EF /* CDVFile.h */,
+				9AD333D42F5046B38B9D3E68 /* CDVLocalFilesystem.h */,
+				9906D04B05F74E7795C01FFD /* CDVAssetLibraryFilesystem.h */,
 			);
 			name = Plugins;
 			path = TataRadio/Plugins;
@@ -375,6 +395,10 @@
 				5540C99AD62943A7808B5843 /* CDVStatusBar.m in Sources */,
 				9C8D8131272343F6B01E90A4 /* Toast+UIView.m in Sources */,
 				9EAB0FDCDE02463990C6DB0A /* Toast.m in Sources */,
+				CDA0EDA28D5C4B479C4A8995 /* BackgroundAudio.m in Sources */,
+				D53D7EF9942047F1A04CB80A /* CDVFile.m in Sources */,
+				3BA73536DE664B809BC8EFCD /* CDVLocalFilesystem.m in Sources */,
+				1E2392C6EEF74BC2ACAF6975 /* CDVAssetLibraryFilesystem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
