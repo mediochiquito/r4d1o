@@ -1,26 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest android:hardwareAccelerated="true" android:versionCode="1" android:versionName="0.0.1" package="com.tata.radio" xmlns:android="http://schemas.android.com/apk/res/android">
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <application android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name" android:supportsRtl="true">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/activity_name" android:launchMode="singleTop" android:name="MainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:windowSoftInputMode="adjustResize">
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="org.prx.playerhater.PlaybackService">
-            <meta-data android:name="org.prx.playerhater.Config" android:resource="@xml/playerhater" />
-        </service>
-        <receiver android:name="org.prx.playerhater.BroadcastReceiver">
+        <service android:name="com.imsd.radio.RadioPlayerService">
             <intent-filter>
-                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="com.imsd.radio.INTENT_PLAYPAUSE" />
+                <action android:name="com.imsd.radio.INTENT_OPENPLAYER" />
+                <action android:name="com.imsd.radio.INTENT_CANCEL" />
             </intent-filter>
-        </receiver>
+        </service>
     </application>
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="23" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 </manifest>

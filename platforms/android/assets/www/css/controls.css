@@ -1,14 +1,11 @@
 .btn-ripple {
     cursor: pointer;
 }
-
 .btn {-webkit-backface-visibility: hidden;}
-
 .btn span {
     z-index: 12;
     position: relative;
 }
-
 .btn-ripple {
     background-color: #FFFFFF;
     width: 100%;
@@ -29,7 +26,6 @@
     opacity: 0;
     border-radius: 4px;
 }
-
 .btn-zoom-hover {
     transform: scale(.97, .97) !important;
     -ms-transform: scale(.97, .97) !important;
@@ -37,17 +33,13 @@
     -moz-transform: scale(.97, .97) !important;
 
 }
-
 .btn-ripple-hover {
     opacity: 1;
     transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
-
 }
-
-
 @-webkit-keyframes loading {
     0% {
         -webkit-transform: rotate(0deg);
@@ -59,11 +51,9 @@
 
 @keyframes loading {
     0% {
-
         -webkit-transform: rotate(0deg);
     }
     100% {
-
         -webkit-transform: rotate(-360deg);
     }
 }

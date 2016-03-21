@@ -5,18 +5,15 @@ function App() {
 
     this.toastmessage = null;
     this.loading = null;
-
+    this.esCordova = false;
 
     this.initialize = function ($esCordova) {
 
+        app.esCordova = $esCordova;
+
         self.secciones = new Secciones();
 
-
-
-       app.secciones.go(app.secciones._SeccionHome, 300);
-
-
-
+        app.secciones.go(app.secciones._SeccionHome, 300);
 
         if ($esCordova) {
 

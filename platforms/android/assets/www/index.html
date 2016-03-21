@@ -28,17 +28,19 @@
         * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
-    <!--<meta http-equiv="Content-Security-Policy"-->
-          <!--content="default-src 'self' http://74.50.111.38 data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' http://74.50.111.38/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-    <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/controls.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
 
     <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/libs/jquery.transit.min.js"></script>
@@ -63,8 +65,14 @@
     <div id='secciones'>
 
         <div id="SeccionHome" class='seccion'>
-            <div id="buffer"></div>
-            <div id="btn-empezar" class="btn" data-btn-fx="zoom">EMPEZAR</div>
+
+            <img id="home-logo" src="img/home/logo.png" />
+
+            <div id="home-btn-play-pause" class="enpausa"></div>
+            <div id="home-txt-artista"  class="enpausa">Cargando...</div>
+            <div id="home-txt-cancion" class="enpausa"></div>
+
+
 
         </div>
 

@@ -32,10 +32,27 @@ var cordovaApp = {
     },
 
     receivedEvent: function (id, $esCordova) {
-       // app.initialize(false);
 
-                app.initialize($esCordova);
 
+        if($esCordova){
+
+            if(device.platform == "Android"){
+
+                navigator.RADIO.initialize(function(s) {
+                    alert(s);
+                }, function(s) {
+                    alert('ERROR RADIO.initialize');
+                });
+
+            }
+
+
+
+        }
+
+
+
+        app.initialize($esCordova);
 
     }
 

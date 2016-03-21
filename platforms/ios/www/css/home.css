@@ -1,0 +1,43 @@
+#home-logo{
+    position: relative;
+    width: 70%;
+    margin: 70px 15% auto;
+}
+#home-btn-play-pause {
+    position: relative;
+    #/* home-btn-play-pause (background) color */
+    border: none;
+    outline:none;
+    height: 100px;
+    width: 100px;
+    font-size: 1.2em;  /* Change size */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, .3); */
+    cursor:pointer;
+    background-color: #98147B;
+    margin: 40px auto 0;
+    border: solid 7px #fff;
+    border-radius: 50px;
+    background-image: url(../img/home/bg-play-pause.png);
+    background-size: 65px;
+    background-repeat: no-repeat;
+    background-position: 10px -4px;
+}
+#home-btn-play-pause.enpausa{background-position: 10px -110px;}
+
+#home-play-pause {background-color: #A40080;position: relative;width: 100px;height: 100px;margin: 0 auto;border: solid 5px #fff;border-radius: 50px;overflow: hidden;}
+
+#home-txt-artista {
+    font-family: 'roboto-bold-webfont';
+    color: #fff;
+    text-align: center;
+    margin: 20px auto 0;
+    width: 80%;
+}
+
+#home-txt-cancion {
+    font-family: 'roboto-light-webfont';
+    color: #fff;
+    text-align: center;
+    margin: 2px auto 0;
+    width: 80%;
+}

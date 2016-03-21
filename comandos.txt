@@ -1,2 +1,34 @@
 cordova create r4d10 com.tata.radio TataRadio
 
+cordova plugin add cordova-plugin-device
+cordova plugin add cordova-plugin-network-information
+cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-vibration
+cordova plugin add cordova-plugin-statusbar
+cordova plugin add cordova-plugin-x-toast
+cordova plugin add cordova-plugin-facebook4 --save --variable APP_ID="" --variable APP_NAME="GeoBar"
+
+
+
+
+//ios
+cordova plugin add https://github.com/keosuofficial/cordova-audio-stream-plugin.git
+cordova plugin add cordova-plugin-nowplaying
+cordova plugin add cordova-plugin-remotecommand
+
+
+
+
+//android
+cordova plugin add cordova-plugin-streaming
+
+
+
+
+
+// busquedas
+cordova-plugin-streaming
+cordova plugin add cordova-media-with-compression
+cordova  plugin add https://github.com/wnyc/cordova-plugin-playerhater.git
+cordova plugin add https://github.com/EddyVerbruggen/cordova-plugin-backgroundaudio
+cordova plugin add https://github.com/eworx/av-audio-session-adapter
