@@ -19,9 +19,6 @@
         "cordova-plugin-remotecommand": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "com.keosu.cordova.stream": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.tata.radio"
         },
@@ -44,6 +41,12 @@
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-streaming": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },

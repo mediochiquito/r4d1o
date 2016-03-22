@@ -26,18 +26,12 @@ body {
 }
 
 .seccionOculta{
-    height: 1px  !important;
-    width: 1px !important;
+    /*height: 1px  !important;*/
+    /*width: 1px !important;*/
     overflow: hidden;
     display: none !important;
 }
-#conectando{
-    position: absolute;
-    text-align: center;
-    top:50%;
-    left:50%;
-    -webkit-transform: translate(-50%, -50%);
-}
+
 #app {
     position: absolute;
     margin: 0 auto;
@@ -61,7 +55,9 @@ body {
     height: 100%;
 }
 
-#toolbar {background-color: #60256f;height: 50px;width: 100%;
+#toolbar {
+    position: absolute;
+    background-color: #60256f;height: 50px;width: 100%;
     -webkit-transform: translateY(-60px);
     -moz-transform: translateY(-60px);
     -ms-transform: translateY(-60px);
@@ -72,6 +68,9 @@ body {
     -ms-transition: .3s;
     -o-transition:.3s;
     transition: .3s;
+    z-index: 999999;
+
+
 }
 
 #toolbar.open{
@@ -81,7 +80,7 @@ body {
     -ms-transform: translateY(0px);
     -o-transform: translateY(0px);
     transform: translateY(0px);
-
+    z-index: 999999;
 }
 
 

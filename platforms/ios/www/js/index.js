@@ -34,22 +34,24 @@ var cordovaApp = {
     receivedEvent: function (id, $esCordova) {
 
 
-        if($esCordova){
+        if ($esCordova) {
 
-            if(device.platform == "Android"){
+            if (device.platform == "Android") {
 
-                navigator.RADIO.initialize(function(s) {
-                    alert(s);
-                }, function(s) {
+                navigator.RADIO.initialize(function (s) {
+                    if (s == 'STOPPED-FROM-NOTIFICATION') {
+                        app.secciones._SeccionHome.stopAudioFromNotification()
+                    }
+
+                }, function (s) {
                     alert('ERROR RADIO.initialize');
                 });
+
 
             }
 
 
-
         }
-
 
 
         app.initialize($esCordova);
@@ -59,4 +61,4 @@ var cordovaApp = {
 };
 
 cordovaApp.initialize();
-var app =  new App()
+var app = new App()

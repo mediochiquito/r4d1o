@@ -33,14 +33,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.keosu.cordova.stream/www/Stream.js",
-        "id": "com.keosu.cordova.stream.Stream",
-        "pluginId": "com.keosu.cordova.stream",
-        "clobbers": [
-            "window.Stream"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -275,6 +267,30 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/MediaError.js",
+        "id": "cordova-plugin-media.MediaError",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-media/www/Media.js",
+        "id": "cordova-plugin-media.Media",
+        "pluginId": "cordova-plugin-media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-streaming/www/radio.js",
+        "id": "cordova-plugin-streaming.RADIO",
+        "pluginId": "cordova-plugin-streaming",
+        "clobbers": [
+            "navigator.RADIO"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -284,7 +300,6 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.2",
     "cordova-plugin-nowplaying": "1.0.0",
     "cordova-plugin-remotecommand": "1.0.0",
-    "com.keosu.cordova.stream": "0.1",
     "cordova-plugin-device": "1.1.1",
     "cordova-plugin-network-information": "1.2.0",
     "cordova-plugin-splashscreen": "3.1.0",
@@ -292,7 +307,9 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.1.2",
     "cordova-plugin-x-toast": "2.5.0",
     "nl.x-services.plugins.backgroundaudio": "1.0.1",
-    "cordova-plugin-file": "4.1.1"
+    "cordova-plugin-file": "4.1.1",
+    "cordova-plugin-media": "2.1.0",
+    "cordova-plugin-streaming": "1.3.0"
 }
 // BOTTOM OF METADATA
 });

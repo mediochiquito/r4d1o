@@ -4,23 +4,34 @@
 function SeccionHome() {
 
     this.main = document.getElementById('SeccionHome');
-
+    this.name = 'Home';
     var stream;
-    var url_stream = 'http://74.50.111.38/stream';
+     var url_stream = 'http://74.50.111.38/stream/';
+
+
+    // mp3
+    //var url_stream = 'http://192.81.248.194:8000/;?icy=http';
     var ecuchando = false;
     var buffereando = false;
 
-
     setTimeout(consultar_cancion_actual, 100);
 
-
     new Boton($('#home-btn-play-pause'), function () {
-
         if (ecuchando) {
             detenerRadio();
         } else {
             iniciarRadio();
         }
+    });
+
+    new Boton($('#home-btn-info'), function () {
+        app.secciones.go(app.secciones._SeccionInfo, 300);
+    });
+    new Boton($('#home-btn-top'), function () {
+        app.secciones.go(app.secciones._SeccionTop, 300);
+    });
+    new Boton($('#home-btn-email'), function () {
+        app.secciones.go(app.secciones._SeccionContacto, 300);
     });
 
 
@@ -31,7 +42,6 @@ function SeccionHome() {
         RemoteCommand.on('play', iniciarRadio)
         RemoteCommand.on('pause', detenerRadio);
 
-        //stream = new Stream(url_stream, onSuccess, onError);
         stream = new Audio(url_stream, onSuccess, onError);
     }
 
@@ -53,7 +63,7 @@ function SeccionHome() {
 
         $.ajax({
                 method: "GET",
-                url: app.SREVER + "currentSong.php",
+                url: app.SERVER + "currentSong.php",
                 cache: false
             })
             .done(function (msg) {
@@ -80,16 +90,23 @@ function SeccionHome() {
         $('#home-txt-cancion').html(array_artita_cancion[1]);
 
         if (app.esCordova && device.platform == "iOS") {
-            console.log( cordova.file.applicationDirectory)
+
             NowPlaying.set({
-                artwork: "img/art.jpg",
+                artwork: app.SERVER + 'img/art.jpg',
                 albumTitle: array_artita_cancion[0],
                 artist: array_artita_cancion[1],
                 title: "Super Radio Ta-ta"
+
             });
 
         }
     }
+
+    this.stopAudioFromNotification = function () {
+        detenerRadio();
+    };
+
+
     function detenerRadio() {
 
         ecuchando = false;
@@ -101,19 +118,23 @@ function SeccionHome() {
             stream.pause();
 
             NowPlaying.set({
+                artwork: app.SERVER + 'img/art.jpg',
                 albumTitle: "",
                 artist: '',
                 title: "Super Radio Ta-ta"
+
             });
 
         }
 
         if (app.esCordova && device.platform == "Android") {
+
             navigator.RADIO.stop(function (s) {
-                console.log('SUCCESS navigator.RADIO.stop');
+
             }, function (s) {
-                console.log('ERROR navigator.RADIO.stop');
+
             });
+            //stream.pause();
         }
 
         if (!app.esCordova) {
@@ -133,40 +154,59 @@ function SeccionHome() {
         $('#home-btn-play-pause').removeClass("enpausa");
 
 
+
         //ios
         if (app.esCordova && device.platform == "iOS") {
             stream.load()
             stream.play()
             NowPlaying.set({
+                artwork: app.SERVER + 'img/art.jpg',
                 albumTitle: "Cargando...",
                 artist: '',
                 title: "Super Radio Ta-ta"
             });
-          //  stream.play();
+
         }
 
         //android
         if (app.esCordova && device.platform == "Android") {
-            navigator.RADIO.play(function (s) {
-                alert(s);
-                if (s == 'STOPPED') {
 
-                }
+            //
+            navigator.RADIO.play(function (s) {
+                // alert(s);
+
             }, function (s) {
-                alert('ERROR navigator.RADIO.play');
+                alert('Error al iniciar la radio.');
             }, url_stream, 'Super Radio Ta-Ta', '');
+
+
+            //window.plugins.stream.action({act:'play', path: url_stream},function(){},function(){});
+
+            //stream = new Media(url_stream, function(){
+            //    alert('ok')
+            //}, function(){
+            //    alert('error')
+            //},function(e){
+            //    alert("strem status" + e)
+            //});
+            //
+            //stream.play()
+
+            aacdecoder.mediaPlayer(url_stream);
         }
 
         //browser
         if (!app.esCordova) {
+
             stream = new Audio(url_stream, onSuccess, onError);
-            stream.play()
+           stream.play()
         }
 
     }
 
 
     this._set = function (data) {
+
 
 
     };

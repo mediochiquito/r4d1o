@@ -37,9 +37,6 @@
     <feature name="RemoteCommand">
         <param name="ios-package" value="MRemoteCommand" />
     </feature>
-    <feature name="Stream">
-        <param name="ios-package" value="CDVStream" />
-    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -69,6 +66,9 @@
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />

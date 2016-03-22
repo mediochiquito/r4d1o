@@ -1,0 +1,11 @@
+
+#top-content {position: absolute;width: 100%;height: 100%;top: 0;padding: 100px 0 0 0;}
+#top-content > div{
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+}
+#top-content > div > div{color: #fff;font-size: 12px;padding: 2px 18px 2px 2px;height: 92%;overflow: auto; -webkit-overflow-scrolling: touch; margin: 13px 5px 13px 13px;}
+#top-content > div > div > div{
+    position: relative;
+}

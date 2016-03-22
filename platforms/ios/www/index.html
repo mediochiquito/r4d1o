@@ -29,7 +29,7 @@
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' http://192.168.0.3  http://192.168.235.140 http://74.50.111.38/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src  'self' 'unsafe-inline'; media-src *">
+          content="default-src 'self' http://192.168.0.3  http://192.81.248.194:8000  http://192.168.235.140 http://74.50.111.38/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src  'self' 'unsafe-inline'; media-src *">
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -60,7 +60,7 @@
             <img id="home-logo" src="img/home/logo.png"/>
 
             <div id="home-player">
-                <div id="home-btn-play-pause" class="enpausa" data-btn-fx="zoom">
+                <div id="home-btn-play-pause" class="btn enpausa" data-btn-fx="zoom">
 
                     <img  src="img/home/bg-play-pause.png"/>
 
@@ -70,9 +70,9 @@
             </div>
             <div id="home-menu-nav">
 
-                <div class="home-btn-nav" id="home-btn-info" data-btn-fx="zoom"><img src="img/home/btn-info.svg"/></div>
-                <div class="home-btn-nav" id="home-btn-top" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/></div>
-                <div class="home-btn-nav" id="home-btn-email" data-btn-fx="zoom"><img src="img/home/btn-email.svg"/>
+                <div class="btn home-btn-nav" id="home-btn-info" data-btn-fx="zoom"><img src="img/home/btn-info.svg"/></div>
+                <div class="btn home-btn-nav" id="home-btn-top" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/></div>
+                <div class="btn home-btn-nav" id="home-btn-email" data-btn-fx="zoom"><img src="img/home/btn-email.svg"/>
                 </div>
 
             </div>
@@ -153,7 +153,6 @@
 
             <div class="sub-toolbar">
                 <div>Seleccioná tus favoritas</div>
-
             </div>
             <div id="top-content">
                 <div>
@@ -188,7 +187,7 @@
 
     <div id="toolbar">
 
-        <div id="toolbal-btn-volver" data-btn-fx="zoom"><img src="img/flecha-volver.svg"/></div>
+        <div id="toolbal-btn-volver" data-btn-fx="zoom" class="btn"><img src="img/flecha-volver.svg"/></div>
         <div id="toolbal-label">Seccion</div>
 
     </div>
@@ -209,8 +208,8 @@
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionTop.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionContacto.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/App.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
 </body>
 </html>

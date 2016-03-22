@@ -39,15 +39,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "com.keosu.cordova.stream": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/keosuofficial/cordova-audio-stream-plugin.git",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-device": {
         "source": {
             "type": "registry",
@@ -101,6 +92,22 @@
             "type": "git",
             "url": "https://github.com/EddyVerbruggen/cordova-plugin-backgroundaudio",
             "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-media": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-media@~2.1.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-streaming": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-streaming"
         },
         "is_top_level": true,
         "variables": {}

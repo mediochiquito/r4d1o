@@ -14,15 +14,11 @@ function Secciones(){
 
 	this._SeccionContacto = new SeccionContacto();
 	this._SeccionContacto.ocultar(0);
+
     //
 	//this._SeccionMidiendo = new SeccionMidiendo();
 	//this._SeccionMidiendo.ocultar(0);
-    //
-	//this._SeccionRevisando = new SeccionRevisando();
-	//this._SeccionRevisando.ocultar(0);
-    //
-	//this._SeccionResultado = new SeccionResultado();
-	//this._SeccionResultado.ocultar(0);
+
 
 	var despazada = false;
 	var historia = new Array();
