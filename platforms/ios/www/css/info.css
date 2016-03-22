@@ -1,0 +1,21 @@
+#info-logo{
+    position: relative;
+    width: 200px;
+    margin: 70px auto 0;
+}
+#info-logo > img{
+    width: 100%;
+}
+#info-content {position: absolute;width: 100%;height: 100%;top: 0;padding: 240px 5% 5% 5%;}
+#info-content > div{
+    background-color: rgba(116,13,126,0.6);
+    margin: 0 auto;
+    border: solid 3px rgba(255, 255, 255, 0.27);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+}
+#info-content > div > div{color: #fff;font-size: 12px;padding: 2px 18px 2px 2px;height: 92%;overflow: auto; -webkit-overflow-scrolling: touch; margin: 13px 5px 13px 13px;}
+#info-content > div > div > div{
+    position: relative;
+}

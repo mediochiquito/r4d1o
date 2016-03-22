@@ -29,7 +29,7 @@
             * Enable inline JS: add 'unsafe-inline' to default-src
     -->
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' http://192.168.0.3  http://192.168.235.140 http://74.50.111.38/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+          content="default-src 'self' http://192.168.0.3  http://192.168.235.140 http://74.50.111.38/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src  'self' 'unsafe-inline'; media-src *">
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -42,7 +42,8 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/info.css">
-
+    <link rel="stylesheet" type="text/css" href="css/top.css">
+    <link rel="stylesheet" type="text/css" href="css/contacto.css">
 
 </head>
 
@@ -53,31 +54,33 @@
 
     <div id='secciones'>
 
+
         <div id="SeccionHome" class='seccion'>
 
             <img id="home-logo" src="img/home/logo.png"/>
 
-            <div id="home-btn-play-pause" class="enpausa" data-btn-fx="zoom"></div>
-            <div id="home-txt-artista" class="enpausa">Cargando...</div>
-            <div id="home-txt-cancion" class="enpausa"></div>
+            <div id="home-player">
+                <div id="home-btn-play-pause" class="enpausa" data-btn-fx="zoom">
 
+                    <img  src="img/home/bg-play-pause.png"/>
+
+                </div>
+                <div id="home-txt-artista" class="enpausa">Cargando...</div>
+                <div id="home-txt-cancion" class="enpausa"></div>
+            </div>
             <div id="home-menu-nav">
 
                 <div class="home-btn-nav" id="home-btn-info" data-btn-fx="zoom"><img src="img/home/btn-info.svg"/></div>
-                <div class="home-btn-nav" id="home-btn-fav" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/></div>
+                <div class="home-btn-nav" id="home-btn-top" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/></div>
                 <div class="home-btn-nav" id="home-btn-email" data-btn-fx="zoom"><img src="img/home/btn-email.svg"/>
                 </div>
 
             </div>
 
-
         </div>
 
-
         <div id="SeccionInfo" class='seccion'>
-
-            <div id="info-logo" ><img src="img/home/logo.png"/></div>
-
+            <div id="info-logo"><img src="img/home/logo.png"/></div>
             <div id="info-content">
                 <div>
                     <div>
@@ -144,8 +147,41 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <div id="SeccionTop" class='seccion'>
+
+            <div class="sub-toolbar">
+                <div>Seleccioná tus favoritas</div>
+
+            </div>
+            <div id="top-content">
+                <div>
+                    <div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="SeccionContacto" class='seccion'>
+
+            <div class="sub-toolbar">
+                <div>Algo para comentar?</div>
+
+            </div>
+            <div id="contacto-content">
+                <div>
+                    <input type="text"  placeholder="Nombre" id="contacto-nombre" />
+                    <input type="email"  placeholder="E-mail" id="contacto-email" />
+                    <textarea placeholder="Mensaje..." id="contacto-mensaje"></textarea>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
@@ -162,12 +198,16 @@
 
 <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/libs/jquery.transit.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/libs/id3-minimized.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/libs/autosize.min.js"></script>
+
+
 <script type="text/javascript" charset="utf-8" src="js/com/utils/Boton.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/Base_Seccion.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/Secciones.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionHome.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionInfo.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionTop.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionContacto.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/App.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>

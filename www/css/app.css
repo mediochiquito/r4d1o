@@ -61,8 +61,40 @@ body {
     height: 100%;
 }
 
-#toolbar {background-color: #60256f;height: 60px;width: 100%;}
+#toolbar {background-color: #60256f;height: 50px;width: 100%;
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+    transform: translateY(-60px);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition:.3s;
+    transition: .3s;
+}
 
-#toolbal-btn-volver {width: 60px;height: 60px;float: left;}
-#toolbal-btn-volver > img {width: 24px;height: 24px;margin-top: 18px;margin-left: 18px;}
-#toolbal-label {position: relative;float: left;color: #fff;font-family: 'roboto-bold-webfont';font-size: 20px;margin-top: 16px;}
+#toolbar.open{
+
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+
+}
+
+
+#toolbal-btn-volver {width: 50px;height: 50px;float: left;margin-right: 6px;}
+#toolbal-btn-volver > img {width: 22px;height: 22px;margin-top: 15px;margin-left: 15px;}
+#toolbal-label {position: relative;float: left;color: #fff; font-family: 'roboto-bold-webfont'; font-size: 20px; margin-top: 12px; }
+
+.sub-toolbar {
+    position: relative;
+    width: 100%;
+    height:50px;
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+.sub-toolbar > div{font-size: 16px;color: #881f75;margin-left: 15px;padding-top: 14px;float: left;}

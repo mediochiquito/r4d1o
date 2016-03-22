@@ -17,8 +17,13 @@ function Boton($element, $callback, $callback_over, $callback_out){
 
 	$(this.main).bind("touchend", do_mouseout);
 	$(this.main).bind("touchstart", do_mouseover);
-	$(this.main).bind("touchstart", do_click);
+	$(this.main).bind("touchend", do_click);
+	$(this.main).bind("touchleave", doleave);
 
+	function doleave(e){
+
+		alert('lee')
+	}
 	function do_click(evt){
 
 		try{
@@ -52,7 +57,7 @@ function Boton($element, $callback, $callback_over, $callback_out){
 	}
 	
 	function do_mouseout(){
-		
+
 		if(habil){
 
 			$($element).find('.btn-ripple').removeClass('btn-ripple-hover');

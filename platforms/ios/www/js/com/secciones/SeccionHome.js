@@ -4,24 +4,32 @@
 function SeccionHome() {
 
     this.main = document.getElementById('SeccionHome');
-
+    this.name = 'Home';
     var stream;
     var url_stream = 'http://74.50.111.38/stream';
     var ecuchando = false;
     var buffereando = false;
-
-
     setTimeout(consultar_cancion_actual, 100);
 
-
     new Boton($('#home-btn-play-pause'), function () {
-
         if (ecuchando) {
             detenerRadio();
         } else {
             iniciarRadio();
         }
     });
+
+    new Boton($('#home-btn-info'), function () {
+        app.secciones.go(app.secciones._SeccionInfo, 300);
+    });
+    new Boton($('#home-btn-top'), function () {
+        app.secciones.go(app.secciones._SeccionTop, 300);
+    });
+    new Boton($('#home-btn-email'), function () {
+        app.secciones.go(app.secciones._SeccionContacto, 300);
+    });
+
+
 
 
     if (app.esCordova && device.platform == "iOS") {

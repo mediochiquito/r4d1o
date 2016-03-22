@@ -5,14 +5,15 @@ function Secciones(){
 	this._SeccionHome = new SeccionHome();
 	this._SeccionHome.ocultar(0);
 
-	//this._SeccionSexo = new SeccionSexo();
-	//this._SeccionSexo.ocultar(0);
-    //
-	//this._SeccionPajita = new SeccionPajita();
-	//this._SeccionPajita.ocultar(0);
-    //
-	//this._SeccionCalibrando = new SeccionCalibrando();
-	//this._SeccionCalibrando.ocultar(0);
+	this._SeccionInfo = new SeccionInfo();
+	this._SeccionInfo.ocultar(0);
+
+	this._SeccionTop = new SeccionTop();
+	this._SeccionTop.ocultar(0);
+
+
+	this._SeccionContacto = new SeccionContacto();
+	this._SeccionContacto.ocultar(0);
     //
 	//this._SeccionMidiendo = new SeccionMidiendo();
 	//this._SeccionMidiendo.ocultar(0);
@@ -33,6 +34,8 @@ function Secciones(){
 	document.addEventListener("backbutton", backKeyDown, false);
 
 	function backKeyDown(){
+
+
 
 	}
 
@@ -62,9 +65,9 @@ function Secciones(){
 		if(guardar_historia) historia.push([$base_seccion, $data]);
 
 		//setTimeout(function(){
-			$base_seccion.mostrar($time, $data, $dir);
+		$base_seccion.mostrar($time, $data, $dir);
 		//}, 500);
-		
+
 		obj_seccion_actual = $base_seccion
 
 	}
