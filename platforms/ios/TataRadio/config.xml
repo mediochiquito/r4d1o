@@ -31,37 +31,8 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
-    <feature name="NowPlaying">
-        <param name="ios-package" value="MNowPlaying" />
-    </feature>
-    <feature name="RemoteCommand">
-        <param name="ios-package" value="MRemoteCommand" />
-    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="ios-package" value="CDVConnection" />
-    </feature>
-    <feature name="SplashScreen">
-        <param name="ios-package" value="CDVSplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Vibration">
-        <param name="ios-package" value="CDVVibration" />
-    </feature>
-    <feature name="StatusBar">
-        <param name="ios-package" value="CDVStatusBar" />
-        <param name="onload" value="true" />
-    </feature>
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarStyle" value="lightcontent" />
-    <feature name="Toast">
-        <param name="ios-package" value="Toast" />
-    </feature>
-    <feature name="BackgroundAudio">
-        <param name="ios-package" value="BackgroundAudio" />
-        <param name="onload" value="true" />
     </feature>
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
@@ -69,6 +40,35 @@
     </feature>
     <feature name="Media">
         <param name="ios-package" value="CDVSound" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="NowPlaying">
+        <param name="ios-package" value="MNowPlaying" />
+    </feature>
+    <feature name="RemoteCommand">
+        <param name="ios-package" value="MRemoteCommand" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <feature name="Vibration">
+        <param name="ios-package" value="CDVVibration" />
+    </feature>
+    <feature name="Toast">
+        <param name="ios-package" value="Toast" />
+    </feature>
+    <feature name="BackgroundAudio">
+        <param name="ios-package" value="BackgroundAudio" />
+        <param name="onload" value="true" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
@@ -120,6 +120,6 @@
     <preference name="StatusBarStyle" value="blackopaque" />
     <preference name="ShowTitle" value="true" />
     <preference name="LoadingDialog" value="My Title,My Message" />
-    <preference name="minSdkVersion" value="16" />
-    <preference name="targetSdkVersion" value="19" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="22" />
 </widget>

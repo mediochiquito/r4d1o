@@ -1,3 +1,4 @@
+//vordova 6.0.0
 cordova create r4d10 com.tata.radio TataRadio
 
 cordova plugin add cordova-plugin-file
