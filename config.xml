@@ -34,6 +34,7 @@
         <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
         <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     </platform>
+
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
@@ -60,6 +61,7 @@
         <splash height="1334" src="res/screen/ios/Default-667h.png" width="750" />
         <splash height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
     </platform>
+
     <preference name="Fullscreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
@@ -72,8 +74,7 @@
 
     <preference name="ShowTitle" value="true"/>
     <preference name="LoadingDialog" value="My Title,My Message" />
-    <preference name="minSdkVersion" value="16" />
-    <preference name="targetSdkVersion" value="19" />
-
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="22" />
 
 </widget>
