@@ -19,8 +19,8 @@ cordova plugin add cordova-plugin-remotecommand
 
 
 //android
-cordova plugin add cordova-plugin-streaming
-
+cordova plugin add https://github.com/mateomenestrina/cordova-plugin-streaming
+cordova plugin add /Users/mateo/developer/cordova-plugin
 
 
 

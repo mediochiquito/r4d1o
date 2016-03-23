@@ -216,13 +216,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-streaming/www/radio.js",
-        "id": "cordova-plugin-streaming.RADIO",
-        "clobbers": [
-            "navigator.RADIO"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-vibration/www/vibration.js",
         "id": "cordova-plugin-vibration.notification",
         "merges": [
@@ -245,6 +238,13 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-x-toast/test/tests.js",
         "id": "cordova-plugin-x-toast.tests"
+    },
+    {
+        "file": "plugins/cordova-plugin-streaming/www/radio.js",
+        "id": "cordova-plugin-streaming.RADIO",
+        "clobbers": [
+            "navigator.RADIO"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -259,11 +259,11 @@ module.exports.metadata =
     "cordova-plugin-remotecommand": "1.0.0",
     "cordova-plugin-splashscreen": "3.1.0",
     "cordova-plugin-statusbar": "2.1.2",
-    "cordova-plugin-streaming": "1.3.0",
     "cordova-plugin-vibration": "2.1.0",
     "cordova-plugin-whitelist": "1.2.1",
     "cordova-plugin-x-toast": "2.5.0",
-    "nl.x-services.plugins.backgroundaudio": "1.0.1"
+    "nl.x-services.plugins.backgroundaudio": "1.0.1",
+    "cordova-plugin-streaming": "1.3.0"
 };
 // BOTTOM OF METADATA
 });

@@ -34,9 +34,6 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-streaming": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
         "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.tata.radio"
         },
@@ -47,6 +44,9 @@
             "PACKAGE_NAME": "com.tata.radio"
         },
         "nl.x-services.plugins.backgroundaudio": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-streaming": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },

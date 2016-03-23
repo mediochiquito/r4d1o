@@ -18,10 +18,9 @@ function Boton($element, $callback, $callback_over, $callback_out) {
 
     $(this.main).bind("touchend", do_mouseout);
     $(this.main).bind("touchstart", do_mouseover);
-    $(this.main).bind("touchend", do_click);
+    $(this.main).bind("click", do_click);
 
     function do_click(evt) {
-
 
         try {
             if (device.platform == "Android") navigator.vibrate(100);

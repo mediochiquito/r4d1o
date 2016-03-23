@@ -100,6 +100,13 @@ function SeccionHome() {
             });
 
         }
+
+        if (app.esCordova && device.platform == "Android") {
+
+            navigator.RADIO.setInfo(array_artita_cancion[0], array_artita_cancion[1]);
+
+        }
+
     }
 
     this.stopAudioFromNotification = function () {
@@ -192,7 +199,7 @@ function SeccionHome() {
             //
             //stream.play()
 
-            aacdecoder.mediaPlayer(url_stream);
+          //  aacdecoder.mediaPlayer(url_stream);
         }
 
         //browser

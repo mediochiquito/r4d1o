@@ -64,12 +64,10 @@
 
         <source-file src="src/android/RadioPlugin.java" target-dir="src/com/imsd/radio/" />
 
-        <source-file src="src/android/libs/arm64-v8a/libaacdecoder.so" target-dir="libs/arm64-v8a" />
         <source-file src="src/android/libs/armeabi/libaacdecoder.so" target-dir="libs/armeabi" />
         <source-file src="src/android/libs/armeabi-v7a/libaacdecoder.so" target-dir="libs/armeabi-v7a" />
         <source-file src="src/android/libs/mips/libaacdecoder.so" target-dir="libs/mips" />
         <source-file src="src/android/libs/x86/libaacdecoder.so" target-dir="libs/x86" />
-        <source-file src="src/android/libs/x86_64/libaacdecoder.so" target-dir="libs/x86_64" />
         <source-file src="src/android/libs/libaacdecoder.jar" target-dir="libs" />
 
 

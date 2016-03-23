@@ -106,8 +106,8 @@
     },
     "cordova-plugin-streaming": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-streaming"
+            "type": "local",
+            "path": "/Users/mateo/developer/cordova-plugin/cordova-plugin-streaming"
         },
         "is_top_level": true,
         "variables": {}
