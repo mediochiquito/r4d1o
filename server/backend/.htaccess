@@ -1,0 +1,4 @@
+AuthUserFile /var/www/vhosts/itauverano.com.uy/httpdocs/backend/.htpasswd
+AuthName "Authorized personnel only."
+AuthType Basic
+Require valid-user

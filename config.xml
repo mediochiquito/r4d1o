@@ -72,8 +72,6 @@
     <preference name="StatusBarBackgroundColor" value="#871e75" />
     <preference name="StatusBarStyle" value="blackopaque" />
 
-    <preference name="ShowTitle" value="true"/>
-    <preference name="LoadingDialog" value="My Title,My Message" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="22" />
 

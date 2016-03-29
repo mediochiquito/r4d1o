@@ -1,0 +1,42 @@
+
+        <div  layout="row" flex>
+ 
+
+		        <md-content class="md-padding" flex sv-root sv-part="array_actividades"
+
+						 sv-on-sort="foo($item, $partFrom, $partTo, $indexFrom, $indexTo)" 
+		        >
+
+				    	 <md-card   ng-repeat=" item in array_actividades " ng-hide= 'item.actividades_eliminado == 1' class=' header_unacarta' sv-element>
+				    	 	
+						      <div sv-handle class='content-card-pic-header'><img  draggable="false" ng-class='{desactivado: (item.actividades_activo==0 || item.actividades_activo===false)}'
+						      	   ng-src="../pic/actividades/{{item.actividades_imagen_thumb}}-225x225.jpg" class="md-card-image" alt=""  >
+						      </div>
+						      <div class='md-padding'>
+									  <div class='md-title titulo-card' >{{item.actividades_titulo}}</h4></div>
+								      <div class="md-actions" layout="row" layout-align="end center">
+
+									        <md-button  ng-click='editar(item, $event)'>EDITAR</md-button>
+								       		<md-button  ng-click='eliminar(item, $event)'  class="md-warn">ELIMINAR</md-button>
+								      
+								      </div>
+
+								    </div>
+					    </md-card>
+
+		        </md-content>
+
+
+
+
+
+
+
+			<md-button ng-click="add($event)"  class="md-fab md-button md-default-theme btnAdd"  target="_blank">
+				<md-icon class='material-icons' aria-hidden="true">add</md-icon>
+			</md-button>    
+
+		</div>
+
+
+

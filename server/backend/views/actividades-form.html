@@ -1,0 +1,111 @@
+<md-dialog flex="100" aria-label="form header">
+	
+	   <md-toolbar>
+		    <div class="md-toolbar-tools">
+		    <h2 ng-show='actividad.actividades_id == null '>NUEVA ACTIVIDAD</h2>
+		      <h2 ng-show='actividad.actividades_id != null '>EDITANDO ACTIVIDAD #{{actividad.actividades_id}}</h2>
+		      <span flex></span>
+		      <md-button class="md-icon-button" ng-click="answer('not applicable')">
+		          <md-icon class='material-icons' aria-hidden="true">close</md-icon>
+		      </md-button>
+		    </div>
+	   </md-toolbar>
+
+	   <md-dialog-content layout-padding>
+
+	   		<div>
+		   			
+		   			<div class='label' >Imagen Cuadrada (512x512px) *</div>
+			    	
+			    	<div>
+				    	<div  class='upload-imagen imagenChica offset-sm'>
+					     	<img class='actividadImgCuadrada'  ng-class='{"invisible": (actividad.actividades_imagen_thumb=="" )}' 
+					     		 src='../pic/{{actividad.actividades_imagen_thumb}}-150x150.jpg' />
+					     	<div ngf-drop  ng-model="filesChica" class="drop-box" 
+						         ngf-drag-over-class="dragover" 
+						         ngf-multiple="false" 
+						         ngf-allow-dir="false"
+						         ngf-accept="'image/*'">
+						         <div>Arrastra la imagen, o has click 
+
+							         <a  ngf-select ng-model="filesChica"
+							         	 ngf-multiple="false" 
+							         	 ngf-allow-dir="false"
+							          	 ngf-accept="'image/*'">aquí</a></div>
+					     	</div>
+					    </div>
+			 		 </div>
+
+			     	<md-input-container  >
+				        <label>Titulo *</label>
+				        <input type="text" id="label" ng-model="actividad.actividades_titulo">
+				    </md-input-container>
+
+				    <md-input-container >
+		              <label for="content">Descripción</label>
+		              <textarea  id="content" ng-model="actividad.actividades_desc"></textarea>
+		            </md-input-container>
+
+		           <md-input-container  >
+				        <label>Link</label>
+				        <input type="text" id="label" ng-model="actividad.actividades_link">
+				    </md-input-container>
+
+					<md-input-container >
+		               <label for="content">Código de Youtube  (ej.: K3dXnyQjnx8)</label>
+		               <input type="text" id="label" ng-model="actividad.actividades_yt">
+		            </md-input-container>
+
+
+
+		            <div class='label' >Imagenes Galeria</div>
+
+			    	<div ng-if=" actividad.actividades_imagenes_galeria.length > 0 "  sv-root sv-part="actividad.actividades_imagenes_galeria">
+
+				    	<div  class='una-imagen-galeria offset-sm'   ng-repeat='imagen in actividad.actividades_imagenes_galeria' sv-element>
+				    			
+				    			<md-button ng-click="actividad.actividades_imagenes_galeria.splice($index,1)" class="material-icons md-fab md-mini md-default-theme remove" aria-label="QUITAR">
+				    				<md-icon class='material-icons' aria-hidden="true">remove</md-icon>
+							    </md-button>
+					     		
+					     		<img sv-handle  draggable="false" 	class='actividadImgsGalerias' 
+					      				src='../pic/{{imagen}}-200x200.jpg' />
+
+					      			
+					    </div>
+					    <br style='clear:both'>
+			 		</div>
+
+
+
+
+			     	<div ngf-drop  ng-model="filesGaleria" class="drop-box imagenesGaleria" 
+			         ngf-drag-over-class="dragover" 
+			         ngf-multiple="true" 
+			         ngf-allow-dir="true"
+			         ngf-accept="'image/*'">Arrastra las imagenes, o has click 
+
+				         <a  ngf-select ng-model="filesGaleria"
+				         	 ngf-multiple="true" 
+				         	 ngf-allow-dir="true"
+				          	 ngf-accept="'image/*'">aquí</a>
+
+			     	</div>
+
+
+
+			
+					<md-input-container>
+						<div layout='row'><div ><br />Activo: </div><md-switch ng-model="actividad.actividades_activo" aria-label="Switch"></md-switch></div>
+					</md-input-container>
+
+
+					<md-input-container  >
+						<md-button class="add-tab md-primary md-raised" ng-click='submitForm()' style="margin-right: 0;">Guardar Actividad</md-button>
+					</md-input-container>
+
+			</div>			
+
+	</md-dialog-content>
+
+</md-dialog>

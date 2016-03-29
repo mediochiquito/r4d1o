@@ -1,23 +1,29 @@
-<?php
+<?php header('Access-Control-Allow-Origin: *');
+
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 require 'vendor/autoload.php';
-
 include '../init.php';
-
 $app = new \Slim\App;
-$app->get('/actividades/', function (Request $request, Response $response) {
-    
+$app->get('/current_song', function (Request $request, Response $response) {
 
-   	$rs = mysql_query('SELECT * FROM actividades WHERE actividades_eliminado=0 ORDER BY actividades_orden ASC,  actividades_id DESC');
-    
-   	while($row = mysql_fetch_object($rs)){
-      $row->actividades_imagenes_galeria = json_decode($row->actividades_imagenes_galeria);
-   		$r[] = $row;
-   	}
-    
+    $newResponse = $response->withHeader('Content-type', 'text/plain');
+    $newResponse->getBody()->write(file_get_contents('http://74.50.111.38/currentsong'));
+    return $newResponse;
 
+});
+
+$app->get('/top_songs', function (Request $request, Response $response) {
+
+    $rs = mysql_query('SELECT * FROM top ORDER BY id ASC');
+    while($row = mysql_fetch_object($rs)){
+        $row->like = true;
+        $r[] = $row;
+        $r[] = $row;
+        $r[] = $row;
+        $r[] = $row;
+    }
     $newResponse = $response->withHeader('Content-type', 'application/json');
     $newResponse->getBody()->write(json_encode(array('data' => $r)));
     return $newResponse;
@@ -26,69 +32,27 @@ $app->get('/actividades/', function (Request $request, Response $response) {
 
 
 
-$app->post('/ordenActividades', function (Request $request, Response $response) {
+$app->post('/regsiter', function (Request $request, Response $response) {
     
       $allPostPutVars = $request->getParsedBody();
 
-      foreach($allPostPutVars as $key => $value){
 
-          mysql_query('UPDATE `actividades` SET  
+/*      foreach($allPostPutVars as $key => $value){
+
+          mysql_query('INSERT INTO `usuario` SET
                     
-             actividades_orden = "' . $key . '" 
+             usuario_nombre = "' . $key . '"
 
              WHERE actividades_id = "'.$value.'"');
 
-      }
+      }*/
 
       $newResponse = $response->withHeader('Content-type', 'application/json');
       $newResponse->getBody()->write(json_encode(array('response' =>'ok')));
-      return $newResponse;  
-
-
-});
-
-
-
-$app->post('/actividades/upload_pic', function (Request $request, Response $response) {
-    
-  
-
-    ini_set('memory_limit', '100M');
-    ini_set('post_max_size', '10M');
-    ini_set('upload_max_filesize', '10M');
-    ini_set('max_execution_time', 300);
-    set_time_limit(0);
-
-     $newResponse = $response->withHeader('Content-type', 'application/json');
-
-    if($_FILES["file"]["name"] != ''){
-
-      $hash_file = md5(date('Ymdhis').$_SERVER['REMOTE_ADDR'].rand(0,9999999999));
-      $name = $_FILES["file"]["name"];    
-
-      $arra_ext_name = explode('.', $name);
-
-      $extension = end( $arra_ext_name);  
-      $destino = dirname(dirname(__FILE__)) . "/uploads/$hash_file.$extension";
-      $type = $_FILES['file']['type'];
-      
-      
-      if(move_uploaded_file($_FILES['file']['tmp_name'], $destino)){
-          $newResponse->getBody()->write(json_encode(array('filename' => "$hash_file.$extension")));
-      }else{
-         $newResponse->getBody()->write(json_encode(array('error' => 'error')));
-      }
-
-    }
-
-
-
-    return $newResponse;
+      return $newResponse;
 
 });
-
-
-
+/*
 $app->get('/actividades/{id}', function (Request $request, Response $response) {
  	  
 
@@ -104,7 +68,6 @@ $app->get('/actividades/{id}', function (Request $request, Response $response) {
 
 
 });
-
 
 $app->post('/actividades/', function (Request $request, Response $response) {
     
@@ -212,7 +175,7 @@ $app->delete('/actividades/{id}', function (Request $request, Response $response
 
 
 });
-
+*/
 
 
 

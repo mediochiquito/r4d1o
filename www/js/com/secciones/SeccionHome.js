@@ -63,8 +63,7 @@ function SeccionHome() {
 
         $.ajax({
                 method: "GET",
-                url: app.SERVER + "currentSong.php",
-                cache: false
+                url: app.SERVER + "api/current_song"
             })
             .done(function (msg) {
 

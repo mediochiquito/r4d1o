@@ -1,11 +1,77 @@
 
-#top-content {position: absolute;width: 100%;height: 100%;top: 0;padding: 100px 0 0 0;}
-#top-content > div{
+#top-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 100px 0 0 0;
+}
+
+#top-content > div {
     margin: 0 auto;
     overflow: hidden;
     height: 100%;
 }
-#top-content > div > div{color: #fff;font-size: 12px;padding: 2px 18px 2px 2px;height: 92%;overflow: auto; -webkit-overflow-scrolling: touch; margin: 13px 5px 13px 13px;}
-#top-content > div > div > div{
+
+#top-content > div > div {
+    color: #fff;
+    font-size: 12px;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#top-content > div > div > div {
     position: relative;
 }
+
+#top-content .item {
+    min-height: 50px;
+    font-size: 15px;
+    clear: both;
+}
+
+#top-content .item .btn-like {
+    width: 70px;
+    background-color: rgba(212, 48, 26, 0.88);
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#top-content .item .data {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 80px;
+    z-index: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top-content .item .data .artista {
+    position: relative;
+    font-family: 'roboto-bold-webfont';
+}
+
+#top-content .item .data .cancion {
+    position: relative;
+}
+
+
+#top-content .item:nth-child(1n) {
+    background-color: #713982;
+
+}
+#top-content .item:nth-child(2n) {
+    background-color: #65327e;
+
+}
+
+/*
+#top-content .item:nth-child(3n+1) {
+    background-color: #7a3d83;
+
+}*/
