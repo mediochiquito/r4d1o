@@ -27,10 +27,13 @@ function SeccionTop() {
     function listar(json){
 
         var html = "";
+
         json.data.forEach(function (item){
 
             html += "<div class='item'>" +
-                        "<div class='btn-like'></div>" +
+                        "<div class='btn-like btn' data-btn-fx='zoom'>" +
+                        "<img src='img/top/corazon.png' />" +
+                        "</div>" +
                         "<div class='data'>" +
                             "<div class='artista'>"+item.artista+"</div>" +
                             "<div class='cancion'>"+item.cancion+"</div>" +
@@ -39,7 +42,11 @@ function SeccionTop() {
 
 
         });
+
         $('#top-content > div > div > div').html(html);
+
+
+
 
 
         setTimeout(function(){
@@ -48,6 +55,12 @@ function SeccionTop() {
 
                 new Boton(elem, function (){
 
+                    if(window.localStorage.getItem('uid') == 0){
+
+                        app.secciones.go(app.secciones._SeccionRegistro, 300);
+                        return;
+                    }
+                    //    $(elem).addClass('iLike')
 
 
                 })

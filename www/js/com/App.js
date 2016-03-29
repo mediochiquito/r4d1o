@@ -6,8 +6,8 @@ function App() {
     this.toastmessage = null;
     this.loading = null;
     this.esCordova = false;
-    //this.SERVER = 'http://192.168.235.140/r4d1o/server/';
-    this.SERVER = 'http://192.168.0.3/r4d1o/server/';
+    this.SERVER = 'http://192.168.235.140/r4d1o/server/';
+    //this.SERVER = 'http://192.168.0.3/r4d1o/server/';
     var en_seccion;
     var toolbar;
 
@@ -18,6 +18,9 @@ function App() {
         $(document).bind( "PRE_CHANGE_SECCION", doCambioSeccion)
         toolbar = $("#toolbar");
         app.esCordova = $esCordova;
+
+
+        if(window.localStorage.getItem('uid') == null) window.localStorage.setItem('uid', 0);
 
         self.secciones = new Secciones();
 

@@ -6,7 +6,7 @@
 	error_reporting( E_ALL ^ E_NOTICE ^ E_DEPRECATED );
 
 
-	if($_SERVER['HTTP_HOST']=="192.168.0.3" || $_SERVER['HTTP_HOST']=="192.168.235.153")
+	if($_SERVER['HTTP_HOST']=="192.168.0.3" ||  $_SERVER['HTTP_HOST']=="192.168.235.140")
 	{
 		define("SERVER", "http://".$_SERVER['HTTP_HOST']."/r4d1o/public/", false);
 		

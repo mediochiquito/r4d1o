@@ -45,6 +45,7 @@
     <link rel="stylesheet" type="text/css" href="css/info.css">
     <link rel="stylesheet" type="text/css" href="css/top.css">
     <link rel="stylesheet" type="text/css" href="css/contacto.css">
+    <link rel="stylesheet" type="text/css" href="css/registro.css">
 
 </head>
 
@@ -63,7 +64,7 @@
             <div id="home-player">
                 <div id="home-btn-play-pause" class="btn enpausa" data-btn-fx="zoom">
 
-                    <img  src="img/home/bg-play-pause.png"/>
+                    <img src="img/home/bg-play-pause.png"/>
 
                 </div>
                 <div id="home-txt-artista" class="enpausa">Cargando...</div>
@@ -71,8 +72,10 @@
             </div>
             <div id="home-menu-nav">
 
-                <div class="btn home-btn-nav" id="home-btn-info" data-btn-fx="zoom"><img src="img/home/btn-info.svg"/></div>
-                <div class="btn home-btn-nav" id="home-btn-top" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/></div>
+                <div class="btn home-btn-nav" id="home-btn-info" data-btn-fx="zoom"><img src="img/home/btn-info.svg"/>
+                </div>
+                <div class="btn home-btn-nav" id="home-btn-top" data-btn-fx="zoom"><img src="img/home/btn-fav.svg"/>
+                </div>
                 <div class="btn home-btn-nav" id="home-btn-email" data-btn-fx="zoom"><img src="img/home/btn-email.svg"/>
                 </div>
 
@@ -175,9 +178,34 @@
             </div>
             <div id="contacto-content">
                 <div>
-                    <input type="text"  placeholder="Nombre" id="contacto-nombre" />
-                    <input type="email"  placeholder="E-mail" id="contacto-email" />
+                    <input type="text" placeholder="Nombre" id="contacto-nombre"/>
+                    <input type="email" placeholder="E-mail" id="contacto-email"/>
                     <textarea placeholder="Mensaje..." id="contacto-mensaje"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="SeccionRegistro" class='seccion'>
+
+            <div class="sub-toolbar">
+                <div>Registrate para poder votar</div>
+            </div>
+
+            <div id="registro-content">
+
+                <div>
+
+                    <input type="text" placeholder="Nombre" id="registro-nombre"/>
+                    <input type="text" placeholder="Apellido" id="registro-apellido"/>
+                    <input type="email" placeholder="E-mail" id="registro-email"/>
+                    <div>
+                        <span class='label'>Edad: </span>
+                        <input type="radio" name='sexo' id="registro-sexo-m" value="m" />
+                        <input type="radio" name='sexo' id="registro-sexo-h" value="h" />
+                    </div>
+                    <input type="tel" placeholder="Edad" id="registro-edad"/>
+                    <input type="email" placeholder="Teléfono" id="registro-tel"/>
+
                 </div>
             </div>
         </div>
@@ -208,6 +236,7 @@
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionInfo.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionTop.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionContacto.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionRegistro.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/com/App.js"></script>
 <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/index.js"></script>

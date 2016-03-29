@@ -11,13 +11,11 @@ function Secciones(){
 	this._SeccionTop = new SeccionTop();
 	this._SeccionTop.ocultar(0);
 
-
 	this._SeccionContacto = new SeccionContacto();
 	this._SeccionContacto.ocultar(0);
 
-    //
-	//this._SeccionMidiendo = new SeccionMidiendo();
-	//this._SeccionMidiendo.ocultar(0);
+    this._SeccionRegistro = new SeccionRegistro();
+	this._SeccionRegistro.ocultar(0);
 
 
 	var despazada = false;
