@@ -192,54 +192,63 @@
             </div>
 
             <div id="registro-content">
-
                 <div>
 
-                    <input type="text" placeholder="Nombre" id="registro-nombre"/>
-                    <input type="text" placeholder="Apellido" id="registro-apellido"/>
-                    <input type="email" placeholder="E-mail" id="registro-email"/>
                     <div>
-                        <span class='label'>Edad: </span>
-                        <input type="radio" name='sexo' id="registro-sexo-m" value="m" />
-                        <input type="radio" name='sexo' id="registro-sexo-h" value="h" />
-                    </div>
-                    <input type="tel" placeholder="Edad" id="registro-edad"/>
-                    <input type="email" placeholder="Teléfono" id="registro-tel"/>
 
+                        <input type="text" placeholder="Nombre" id="registro-nombre"/>
+                        <input type="text" placeholder="Apellido" id="registro-apellido"/>
+                        <input type="email" placeholder="E-mail" id="registro-email"/>
+                        <div class="registro-row">
+                            <span class='label'>Sexo: </span>
+                            <div class="radio">
+                                <input id="male" type="radio" name="gender" value="f" checked>
+                                <label for="male">F</label>
+                                <input id="female" type="radio" name="gender" value="m">
+                                <label for="female">M</label>
+                            </div>
+
+                        </div>
+                        <input type="tel" placeholder="Edad" id="registro-edad" maxlength="3"/>
+                        <input type="email" placeholder="Teléfono" id="registro-tel"/>
+
+                        <div  class="btn" id="registro-btn-enviar" data-btn-fx="zoom"><span>ENVIAR</span></div>
+
+
+                    </div>
                 </div>
             </div>
+
+
+        </div>
+
+
+        <div id="toolbar">
+
+            <div id="toolbal-btn-volver" data-btn-fx="zoom" class="btn"><img src="img/flecha-volver.svg"/></div>
+            <div id="toolbal-label">Seccion</div>
+
         </div>
 
 
     </div>
 
+    <script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/libs/jquery.transit.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/libs/autosize.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/libs/jquery.alphanumeric.pack.js"></script>
 
-    <div id="toolbar">
-
-        <div id="toolbal-btn-volver" data-btn-fx="zoom" class="btn"><img src="img/flecha-volver.svg"/></div>
-        <div id="toolbal-label">Seccion</div>
-
-    </div>
-
-
-</div>
-
-<script type="text/javascript" charset="utf-8" src="js/libs/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/libs/jquery.transit.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/libs/autosize.min.js"></script>
-
-
-<script type="text/javascript" charset="utf-8" src="js/com/utils/Boton.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/Base_Seccion.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/Secciones.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionHome.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionInfo.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionTop.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionContacto.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionRegistro.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/com/App.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/utils/Boton.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/Base_Seccion.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/Secciones.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionHome.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionInfo.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionTop.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionContacto.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/secciones/SeccionRegistro.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/com/App.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
 
 </body>
 </html>
