@@ -156,8 +156,4 @@ input[type=checkbox]:checked + label:before {
     margin-bottom: 30px;
 }
 
-.registro-campo-error{
-
-    border-color: red;
-
-}
+.registro-campo-error{border-color: red !IMPORTANT;}

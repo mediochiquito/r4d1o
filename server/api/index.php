@@ -52,6 +52,7 @@ $app->post('/regsiter', function (Request $request, Response $response) {
       return $newResponse;
 
 });
+
 /*
 $app->get('/actividades/{id}', function (Request $request, Response $response) {
  	  
