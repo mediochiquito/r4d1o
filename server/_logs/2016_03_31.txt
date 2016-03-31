@@ -1,0 +1,84 @@
+
+03:12:58 - /r4d1o/server/api/register - |POST|  nombre=a & apellido=b & email=asd@asd.asd & sexo=m & edad=123 & tel=wqewqe &
+03:16:12 - /r4d1o/server/api/register - |POST|  nombre=a & apellido=a & email=a@aasd.asd & sexo=f & edad=232 & tel=13123 &
+03:18:46 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asd & email=asd@asd.asd & sexo=f & edad=23 & tel=dasd &
+03:18:55 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asd & email=asd@asd.asd & sexo=f & edad=23 & tel=dasd &
+03:19:37 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asd & email=asd@asd.asd & sexo=f & edad=23 & tel=dasd &
+03:19:42 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asd & email=asd@asd.asd & sexo=f & edad=23 & tel=dasd &
+03:19:44 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asd & email=asd@asd.asd & sexo=f & edad=23 & tel=dasd &
+03:24:49 - /r4d1o/server/api/register - |POST|  nombre=sdfd & apellido=fdf & email=dfdf@asd.asd & sexo=f & edad=213 & tel=adasd &
+03:24:56 - /r4d1o/server/api/register - |POST|  nombre=sdfd & apellido=fdf & email=dfdf@asd.asd & sexo=f & edad=213 & tel=adasd &
+03:25:02 - /r4d1o/server/api/register - |POST|  nombre=sdfd & apellido=fdf & email=dfdf@asd.asd & sexo=f & edad=213 & tel=adasd &
+03:25:08 - /r4d1o/server/api/register - |POST|  nombre=sdfd & apellido=fdf & email=dfdf@asd.asd & sexo=f & edad=213 & tel=adasd &
+03:25:21 - /r4d1o/server/api/register - |POST|  nombre=sdfd & apellido=fdf & email=dfdf@asd.asd & sexo=f & edad=213 & tel=adasd &
+03:29:45 - /r4d1o/server/api/register - |POST|  nombre=asdasd & apellido=asdad & email=asd@asd.asd & sexo=m & edad=232 & tel=aasdasd21321312 &
+03:55:59 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=ad & email=adasd@asd.asd & sexo=m & edad=213 & tel=123123 &
+03:57:35 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=ad & email=ad@asd.asd & sexo=m & edad=123 & tel=123213123 &
+03:58:24 - /r4d1o/server/api/register - |POST|  nombre= cbcbc & apellido=bcb & email=cb@asd.ad & sexo=m & edad=123 & tel=21323213 &
+03:58:50 - /r4d1o/server/api/register - |POST|  nombre=xcvxc & apellido=vxcvxc & email=vxcvxcv@asd.asd & sexo=m & edad=231 & tel=23123123213 123  &
+04:41:33 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:41:46 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:41:57 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:42:05 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:42:06 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:42:06 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:43:08 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:44:34 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:44:43 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:44:51 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:44:51 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:44:52 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:47:41 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:47:42 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:47:51 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:48:01 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:48:01 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:48:02 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:48:03 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:48:03 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:49:29 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:49:35 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:49:55 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:50:02 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:50:07 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:50:14 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:50:46 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:57:12 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:57:12 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:57:18 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:57:18 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:57:35 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:57:36 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:57:47 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:57:48 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:58:08 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+04:58:08 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+04:59:14 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+05:00:21 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=0 &
+05:00:22 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+05:02:10 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=7e60e660424efa8f29a78113ebd5aba9 & like=1 &
+05:02:25 - /r4d1o/server/api/register - |POST|  nombre=asd & apellido=asda & email=123@qwe.asd & sexo=f & edad=123 & tel=123213213 &
+05:02:27 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=33669ed27af3c5df9707d8f6a32b3f1c & like=0 &
+05:02:57 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=33669ed27af3c5df9707d8f6a32b3f1c & like=1 &
+05:03:06 - /r4d1o/server/api/register - |POST|  nombre=asdad & apellido=asdad & email=asdasd@asd.asd & sexo=m & edad=234 & tel=asdasdasd &
+05:03:08 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:03:17 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:03:18 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:04:54 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:16:03 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:17:39 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:17:41 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=0 &
+05:17:43 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:17:45 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=0 &
+05:17:46 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:17:48 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:17:49 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:22:12 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:23:23 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:24:01 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 
+05:24:05 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=0 &
+05:24:06 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:24:07 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=0 &
+05:24:10 - /r4d1o/server/api/voto - |POST|  idCancion=1 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:24:37 - /r4d1o/server/api/voto - |POST|  idCancion=2 & accessToken=30ec314090fec84a122b44ff80d79d2b & like=1 &
+05:24:39 - /r4d1o/server/api/top_songs?accessToken=30ec314090fec84a122b44ff80d79d2b - |POST| 

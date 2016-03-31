@@ -4,18 +4,20 @@ function SeccionRegistro() {
     this.main = document.getElementById('SeccionRegistro');
 
     $('#registro-edad').numeric();
+    var callback = null;
+    var btn_enviar = new Boton($('#registro-btn-enviar'), enviar);
 
-
-    new Boton($('#registro-btn-enviar'), enviar);
+    this._set = function (obj){
+        callback = obj.callback;
+        btn_enviar.habil(true);
+    };
 
     function enviar() {
-
 
         $('input').removeClass('registro-campo-error');
 
         var r = true;
         var msg = "";
-
 
 
         if (stringVacio($('#registro-nombre').val())) {
@@ -28,12 +30,12 @@ function SeccionRegistro() {
             r = false;
         }
 
-        if (stringVacio($('#registro-email').val())) {
+        if (stringVacio($('#registro-email').val()) || !esMailValido($('#registro-email').val())) {
             $('#registro-email').addClass('registro-campo-error');
             r = false;
         }
 
-        if (stringVacio($('#registro-edad').val()) || !esMailValido($('#registro-edad').val())) {
+        if (stringVacio($('#registro-edad').val())) {
             $('#registro-edad').addClass('registro-campo-error');
             r = false;
         }
@@ -44,17 +46,14 @@ function SeccionRegistro() {
         }
 
 
-
         if (!r) {
             app.alerta("Hay campos incompletos o erroneos.");
             return;
         }
 
-
-
+        btn_enviar.habil(false);
 
         var obj = new Object();
-
         obj.nombre = $('#registro-nombre').val();
         obj.apellido = $('#registro-apellido').val();
         obj.email = $('#registro-email').val();
@@ -63,18 +62,38 @@ function SeccionRegistro() {
         obj.tel = $('#registro-tel').val();
 
         $.ajax({
-            url: 'api/register',
+            url: app.SERVER + 'api/register',
             type: 'post',
             dataType: 'json',
             data: obj,
-            success: onGuardoRegistro
-        });
+            success: onGuardoRegistro,
+            error: function (){
+
+                btn_enviar.habil(true);
+            }
+        })
 
     }
 
-    function onGuardoRegistro(json){
+    function onGuardoRegistro(json) {
 
-        alert(json);
+        if(json.error){
+
+            btn_enviar.habil(true);
+
+        }else{
+
+
+            window.localStorage.setItem("accessToken", json.accessToken);
+
+            setTimeout(function (){
+                callback();
+                app.secciones.go(app.secciones._SeccionTop, 300);
+            }, 500);
+
+        }
+
+        app.alerta(json.message);
 
     }
 

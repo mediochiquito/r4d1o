@@ -7,8 +7,8 @@ function App() {
     this.loading = null;
     this.esCordova = false;
     this.uuid = 'dev';
-    this.SERVER = 'http://192.168.235.140/r4d1o/server/';
-    // this.SERVER = 'http://192.168.0.3/r4d1o/server/';
+    //this.SERVER = 'http://192.168.235.140/r4d1o/server/';
+     this.SERVER = 'http://192.168.0.3/r4d1o/server/';
     var en_seccion;
     var toolbar;
 
@@ -22,17 +22,14 @@ function App() {
 
         if(app.esCordova) app.uuid =  device.uuid;
 
-
-
-        if (window.localStorage.getItem('uid') == null) window.localStorage.setItem('uid', 0);
+        if (window.localStorage.getItem('accessToken') == null) window.localStorage.setItem('accessToken', 0);
 
         self.secciones = new Secciones();
 
         app.secciones.go(app.secciones._SeccionTop, 300);
-//        app.secciones.go(app.secciones._SeccionHome, 300);
+//      app.secciones.go(app.secciones._SeccionHome, 300);
 
         if ($esCordova) {
-
 
         }
 
@@ -66,7 +63,7 @@ function App() {
     this.alerta = function (msg) {
 
         try {
-            plugins.toast.show(msg, 3000, "center");
+            plugins.toast.show(msg, 2000, "center");
         } catch (e) {
             alert(msg);
         }

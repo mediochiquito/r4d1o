@@ -6,6 +6,9 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require 'vendor/autoload.php';
 include '../init.php';
 $app = new \Slim\App;
+
+
+
 $app->get('/current_song', function (Request $request, Response $response) {
 
     $newResponse = $response->withHeader('Content-type', 'text/plain');
@@ -14,11 +17,24 @@ $app->get('/current_song', function (Request $request, Response $response) {
 
 });
 
+
+
+
+
 $app->get('/top_songs', function (Request $request, Response $response) {
 
+    $rs_me = mysql_query('SELECT id FROM usuarios WHERE MD5(CONCAT("vespa", id)) = "' . mysql_real_escape_string($_GET['accessToken']) . '" LIMIT 1');
+    $row_me = mysql_fetch_object($rs_me);
+
+    $rs_mis_votos =  mysql_query('SELECT * FROM votos WHERE usuario_id = "' . mysql_real_escape_string($row_me->id) . '"');
+    $array_mis_voto = array();
+    while($row_mis_votos = mysql_fetch_object($rs_mis_votos)){
+        $array_mis_voto[] = $row_mis_votos->top_id;
+    }
+
     $rs = mysql_query('SELECT * FROM top ORDER BY id ASC');
-    while($row = mysql_fetch_object($rs)){
-        $row->like = true;
+    while ($row = mysql_fetch_object($rs)) {
+        $row->like = in_array($row->id, $array_mis_voto);
         $r[] = $row;
         $r[] = $row;
         $r[] = $row;
@@ -32,30 +48,86 @@ $app->get('/top_songs', function (Request $request, Response $response) {
 
 
 
-$app->post('/regsiter', function (Request $request, Response $response) {
-    
-      $allPostPutVars = $request->getParsedBody();
 
 
-/*      foreach($allPostPutVars as $key => $value){
+$app->post('/register', function (Request $request, Response $response) {
 
-          mysql_query('INSERT INTO `usuario` SET
-                    
-             usuario_nombre = "' . $key . '"
+    $allPostPutVars = $request->getParsedBody();
 
-             WHERE actividades_id = "'.$value.'"');
+    if (mysql_query('INSERT INTO `usuarios` ( `nombre`, `apellido`, `email`, `sexo`, `edad`, `tel`) VALUES (
 
-      }*/
+					"' . mysql_real_escape_string($allPostPutVars['nombre']) . '",
+                    "' . mysql_real_escape_string($allPostPutVars['apellido']) . '",
+					"' . mysql_real_escape_string($allPostPutVars['email']) . '",
+					"' . mysql_real_escape_string($allPostPutVars['sexo']) . '",
+					"' . mysql_real_escape_string($allPostPutVars['edad']) . '",
+					"' . mysql_real_escape_string($allPostPutVars['tel']) . '"
 
-      $newResponse = $response->withHeader('Content-type', 'application/json');
-      $newResponse->getBody()->write(json_encode(array('response' =>'ok')));
-      return $newResponse;
+					)')) {
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse->getBody()->write(json_encode(array('message' => 'Gracias por registrarte.', 'accessToken' => md5('vespa' . mysql_insert_id()))));
+        return $newResponse;
+
+    } else {
+
+        $response->getBody()->write(json_encode(array('error' => true, 'message' => 'Ha ocurrido un error')));
+        return $response;
+
+    }
 
 });
 
+
+
+
+
+
+$app->post('/voto', function (Request $request, Response $response) {
+
+    $allPostPutVars = $request->getParsedBody();
+
+    $rs = mysql_query('SELECT id FROM usuarios WHERE MD5(CONCAT("vespa", id)) = "' . mysql_real_escape_string($allPostPutVars['accessToken']) . '" LIMIT 1');
+    $row = mysql_fetch_object($rs);
+    if (mysql_num_rows($rs) == 1) {
+
+        if ($allPostPutVars['like'] == 1) {
+
+            mysql_query('INSERT INTO `votos` ( `top_id`, `usuario_id`) VALUES (
+                                              "' . mysql_real_escape_string($allPostPutVars['idCancion']) . '",
+                                              "' . $row->id . '"
+                                              );');
+        } else {
+
+            mysql_query ('DELETE FROM `votos` WHERE
+
+                                              top_id = "' . mysql_real_escape_string($allPostPutVars['idCancion']) . '"
+
+                                              AND
+
+                                              usuario_id =  "' . $row->id . '"
+
+                                            ;');
+        }
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse->getBody()->write(json_encode(array('sussess' => true)));
+        return $newResponse;
+
+    }else{
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse->getBody()->write(json_encode(array('error' => true)));
+        return $newResponse;
+
+    }
+
+});
+
+
 /*
 $app->get('/actividades/{id}', function (Request $request, Response $response) {
- 	  
+
 
 
     $id = $request->getAttribute('id');
@@ -177,7 +249,6 @@ $app->delete('/actividades/{id}', function (Request $request, Response $response
 
 });
 */
-
 
 
 $app->run();
