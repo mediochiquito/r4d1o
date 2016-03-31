@@ -1,0 +1,36 @@
+<md-dialog flex="100" aria-label="form header">
+	
+	   <md-toolbar>
+		    <div class="md-toolbar-tools">
+		    <h2 ng-show='actividad.actividades_id == null '>NUEVA CANCION</h2>
+		      <h2 ng-show='actividad.actividades_id != null '>EDITANDO CANCION</h2>
+		      <span flex></span>
+		      <md-button class="md-icon-button" ng-click="answer('not applicable')">
+		          <md-icon class='material-icons' aria-hidden="true">close</md-icon>
+		      </md-button>
+		    </div>
+	   </md-toolbar>
+
+	   <md-dialog-content layout-padding>
+
+	   		<div>
+
+			     	<md-input-container  >
+				        <label>Artista *</label>
+				        <input type="text" id="label" ng-model="top.artista">
+				    </md-input-container>
+
+				    <md-input-container >
+		              <label for="content">Cancion</label>
+		              <input  type="text"  id="content" ng-model="top.cancion"></input>
+		            </md-input-container>
+
+					<md-input-container  >
+						<md-button class="add-tab md-primary md-raised" ng-click='submitForm()' style="margin-right: 0;">Guardar canción</md-button>
+					</md-input-container>
+
+			</div>			
+
+	</md-dialog-content>
+
+</md-dialog>

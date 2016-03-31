@@ -1,19 +1,19 @@
 
-var app = angular.module('adminApp', ['ngAnimate', 'angular-sortable-view', 'ngMaterial', 'ngResource', 'ngRoute', 'ngFileUpload', 'numfmt-error-module'])
-
+var app = angular.module('adminApp', ['ngAnimate',  'ngMaterial', 'ngResource', 'ngRoute'])
+//, 'ngFileUpload', 'numfmt-error-module', 'angular-sortable-view'
 .config(['$routeProvider', '$mdThemingProvider',
  
   function($routeProvider, $mdThemingProvider) {
    
 
     $routeProvider.
-      when('/actividades', {
-        templateUrl: 'views/actividades.html',
-        controller: 'ActividadesCtrl'
+      when('/top', {
+        templateUrl: 'views/top.html',
+        controller: 'TopCtrl'
       }).
     
       otherwise({
-        redirectTo: '/actividades'
+        redirectTo: '/top'
       });
 
      $mdThemingProvider.theme('default')

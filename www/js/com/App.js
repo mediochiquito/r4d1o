@@ -7,8 +7,8 @@ function App() {
     this.loading = null;
     this.esCordova = false;
     this.uuid = 'dev';
-    //this.SERVER = 'http://192.168.235.140/r4d1o/server/';
-     this.SERVER = 'http://192.168.0.3/r4d1o/server/';
+    this.SERVER = 'http://192.168.235.140/r4d1o/server/';
+    //this.SERVER = 'http://192.168.0.3/r4d1o/server/';
     var en_seccion;
     var toolbar;
 

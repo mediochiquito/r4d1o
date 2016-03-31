@@ -25,11 +25,12 @@
               md-is-locked-open="$mdMedia('gt-sm')">
 
                     <div id='logo'>
-                         <img src='img/logo.png' />
+                         <img src='../img/art.jpg' />
                     </div>
 
-                    <md-button ng-href="#/actividades" class='btnNav'  ng-click="closeMenu()"  >Actividades</md-button>
-                 
+             <md-button ng-href="#/top" class='btnNav'  ng-click="closeMenu()"  >Canciones y Votos</md-button>
+             <md-button ng-href="#/usuarios" class='btnNav'  ng-click="closeMenu()"  >Usuarios</md-button>
+
 
      </md-sidenav>
 
@@ -77,19 +78,11 @@
 
    <script type="text/javascript" src="js/angular-sortable-view.min.js"></script>
    
-    <!--
-    <script src="libs/angular.min.js"></script>
-    <script src="libs/angular-animate.min.js"></script>
-    <script src="libs/angular-aria.min.js"></script>
-    <script src="libs/angular-route.min.js"></script>
-    <script src="libs/angular-resource.min.js"></script>-->
 
-
-    <!-- <script src="js/angular-material.min.js"></script>-->
     <script src="app/app.js"></script>
     <script src="app/ng-file-upload.min.js"></script>
 
-    <script src="views/actividades.js"></script>
+    <script src="views/top.js"></script>
 
 
     

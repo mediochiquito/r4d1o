@@ -1,0 +1,39 @@
+
+<div layout-gt-sm="row" layout="column">
+
+        <div  flex="65" flex>
+					<md-list  flex='100'>
+
+						<md-list-item ng-repeat="item in array_tops" >
+
+							<md-input-container  >
+								<label>Artista</label>
+								<input type="text" id="label" ng-model="item.artista">
+							</md-input-container>
+
+							<md-input-container >
+								<label for="content">Cancion</label>
+								<input  type="text"  id="content" ng-model="item.cancion"></input>
+							</md-input-container>
+
+
+							<div class="md-actions" layout="row" layout-align="end center">
+								<md-button  ng-click='eliminar(item, $event)'  class="md-warn">ELIMINAR</md-button>
+							</div>
+
+						</md-list-item>
+					</md-list>
+
+			<md-button ng-click="add($event)"  class="md-fab md-button md-default-theme btnAdd"  target="_blank">
+				<md-icon class='material-icons' aria-hidden="true">add</md-icon>
+			</md-button>
+
+
+		</div>
+
+		<div flex="35" flex>
+
+			Ranking
+			</div>
+
+</div>

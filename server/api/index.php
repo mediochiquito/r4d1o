@@ -36,9 +36,7 @@ $app->get('/top_songs', function (Request $request, Response $response) {
     while ($row = mysql_fetch_object($rs)) {
         $row->like = in_array($row->id, $array_mis_voto);
         $r[] = $row;
-        $r[] = $row;
-        $r[] = $row;
-        $r[] = $row;
+
     }
     $newResponse = $response->withHeader('Content-type', 'application/json');
     $newResponse->getBody()->write(json_encode(array('data' => $r)));
