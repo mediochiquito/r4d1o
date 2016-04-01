@@ -28,8 +28,9 @@
                          <img src='../img/art.jpg' />
                     </div>
 
-             <md-button ng-href="#/top" class='btnNav'  ng-click="closeMenu()"  >Canciones y Votos</md-button>
+             <md-button ng-href="#/canciones" class='btnNav'  ng-click="closeMenu()"  >Canciones y Votos</md-button>
              <md-button ng-href="#/usuarios" class='btnNav'  ng-click="closeMenu()"  >Usuarios</md-button>
+             <md-button ng-href="#/contactos" class='btnNav'  ng-click="closeMenu()"  >Contactos</md-button>
 
 
      </md-sidenav>
@@ -82,7 +83,9 @@
     <script src="app/app.js"></script>
     <script src="app/ng-file-upload.min.js"></script>
 
-    <script src="views/top.js"></script>
+  <script src="views/canciones.js"></script>
+  <script src="views/usuarios.js"></script>
+  <script src="views/contactos.js"></script>
 
 
     

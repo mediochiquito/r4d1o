@@ -15,29 +15,43 @@ md-progress-circular{
     margin-left: -20px;
     margin-top: -20px;
 }
+.voto{
+    background-color: #9F17A0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    /* width: 10px; */
+    height: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 10px;
+    margin-left: -10px;
+    margin-right: 14px;
+}
 .invisible{
     visibility: hidden;
 }
 .contacto_fecha{
     color: #B8B5B5;
-     font-size: 11px;
+    font-size: 11px;
     margin-top: 20px;
     margin-bottom: 5px;
     font-style: italic;
 }
 .contacto_interes{
     font-size: 12px;
-    
+
     margin-top: 12px;
 }
 .contacto_data{
     font-size: 13px;
-    
+
     color: #888;
 }
 .contacto_text{
     font-size: 13px;
-    
+
     margin-top: 10px;
 }
 .formAncho{
@@ -48,35 +62,35 @@ md-progress-circular{
     opacity: .2;
 }
 .drop-box {
-  /* padding: 15px; */
-  border: 2px #E1E1E1 dashed;
-  border-radius: 5px;
-  line-height: 18px;
-  color: grey;
-  /* margin-top: 5px; */
-  font-weight: 400;
-  font-size: 12px;
-  font-family: RobotoDraft,Roboto,'Helvetica Neue',sans-serif;
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 50px;
+    /* padding: 15px; */
+    border: 2px #E1E1E1 dashed;
+    border-radius: 5px;
+    line-height: 18px;
+    color: grey;
+    /* margin-top: 5px; */
+    font-weight: 400;
+    font-size: 12px;
+    font-family: RobotoDraft,Roboto,'Helvetica Neue',sans-serif;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 50px;
 }
 .imagenesGaleria{
 
-height: 50px;
+    height: 50px;
 
-clear: both;
+    clear: both;
 
-float: left;
+    float: left;
 
-position: relative;
+    position: relative;
 
-padding: 14px;
+    padding: 14px;
 
-text-align: center;
+    text-align: center;
 }
 .dragover{
     background-color: #ccc;
@@ -97,7 +111,7 @@ text-align: center;
 
 }
 md-toolbar {
-  color: white; 
+    color: white;
 }
 .imagenHeader{
     width: 100px;
@@ -132,24 +146,24 @@ md-toolbar {
     bottom: 20px;
 }
 .una-imagen-galeria{
-    
-width: calc(20% - 6px);
-    
-position: relative;
-    
-float: left;
-    
-margin: 3px;
-    
-min-height: 142px;
-    
-background-color: #E7E6E6;
-    
-display: table;
-    
-box-sizing: border-box;
-    
-overflow: hidden;
+
+    width: calc(20% - 6px);
+
+    position: relative;
+
+    float: left;
+
+    margin: 3px;
+
+    min-height: 142px;
+
+    background-color: #E7E6E6;
+
+    display: table;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
 }
 .actividadImgsGalerias {
     position: absolute;
@@ -161,7 +175,7 @@ overflow: hidden;
 }
 
 .una-imagen-home{
- 
+
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -185,32 +199,33 @@ overflow: hidden;
     box-sizing: border-box;
     padding: 0;
     margin-bottom: 15px;
+
 }
 .upload-imagen .drop-box{
 
-/* display: table; */
+    /* display: table; */
 }
 .upload-imagen .drop-box div{
 
-position: absolute;
+    position: absolute;
 
-text-align: center;
+    text-align: center;
 
-width: 90%;
+    width: 90%;
 
-top: 50%;
+    top: 50%;
 
--webkit-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 
-transform: translateY(-50%);
+    transform: translateY(-50%);
 
-background-color: rgba(255, 255, 255, 0.68);
+    background-color: rgba(255, 255, 255, 0.68);
 
-padding: 10px;
+    padding: 10px;
 
-box-sizing: border-box;
+    box-sizing: border-box;
 
-left: 5%;
+    left: 5%;
 }
 .upload-imagen.imagenChica{
     width: 150px;
@@ -224,11 +239,11 @@ left: 5%;
 }
 
 .header-card-orden{
-position: absolute;bottom: 18px;left: 20px;color: #666;}
+    position: absolute;bottom: 18px;left: 20px;color: #666;}
 
 .una-imagen{
     width: 50%;
-    
+
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -243,7 +258,7 @@ position: absolute;bottom: 18px;left: 20px;color: #666;}
     width: 100%;
 }
 a{
-    color: #ff0000;
+    color: #BF5BEF;
     cursor: pointer;
 }
 md-list-item{position:  relative;}
@@ -296,7 +311,7 @@ md-radio-button{
 }
 #form-col0{
     position: relative;
-    
+
     width: 240px;
     float: left;
     margin-right: 25px;
@@ -304,32 +319,75 @@ md-radio-button{
 }
 #form-col1{
     width: 270px;
-    
+
     position: relative;
     float: left;
 }
 .add-modelo{
     position: absolute;
 
-    
+
     right: -58px;
     width: 30px !important;
     height: 30px !important;
     min-height: 0;
     padding: 0;
     padding-top: -30px !important;
-  
-}
 
+}
+.contacto_fecha{
+    color: #B8B5B5;
+    font-size: 11px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+.contacto_interes{
+    font-size: 12px;
+
+    margin-top: 12px;
+}
+.contacto_data{
+    font-size: 13px;
+
+    color: #888;
+}
+.contacto_text{
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+table{
+    font-size: 12px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+thead{
+    background-color: #ccc;
+    padding: 0;
+    font-weight: bold;
+}
+thead td{}
+tr{
+    padding: 0;
+    border-bottom: solid 1px #ccc;
+}
+tr td{
+    padding: 6px;
+    margin: 0px;
+    border: 0;
+    border-bottom: solid 1px #ccc;
+}
 
 .add-modelo md-icon{
     margin-top: -8px;
-    
+
 }
 
 .content-card-pic{
     width: 300px;
-    
+
     height: 200px;
     overflow: hidden;
 }
@@ -349,13 +407,13 @@ md-radio-button{
 
 .actividadImgCuadrada{
 
-width: 150px;
+    width: 150px;
 
-height: 150px;
+    height: 150px;
 }
 .actividadImgBanner{
-    
-width: 100%;
+
+    width: 100%;
 }
 .titulo-card{
 
@@ -378,7 +436,7 @@ width: 100%;
 md-select-menu .label{
 
     padding: 15px 15px 0px 15px;
-    
+
 
     color: #CCB;
 
@@ -394,35 +452,35 @@ md-select-menu .label{
 @media (max-width: 780px) {
 
     #form-col0{
-     width: 100%;
+        width: 100%;
     }
     #form-col1{
-      width: 100%;
+        width: 100%;
     }
-    md-input-container{ 
+    md-input-container{
     }
     .una-imagen{
         width: 25%;
     }
     .una-imagen-galeria{
-      min-height:70px;
-      width: calc(25% - 6px);
+        min-height:70px;
+        width: calc(25% - 6px);
     }
 
 }
 
 @media (max-width: 420px) {
- .una-imagen-galeria{
-      min-height:70px;
-      width: calc(50% - 6px);
+    .una-imagen-galeria{
+        min-height:70px;
+        width: calc(50% - 6px);
     }
 
-    
+
     #form-col0{
-     
+
     }
     #form-col1{
-      
+
     }
     .una-imagen{
         width: 33%;

@@ -1,0 +1,70 @@
+<div layout-gt-sm="row" layout="column">
+
+    <div flex="50" flex>
+
+        <div class='md-title'>Canciones</div>
+
+        <md-list flex='100'>
+
+            <md-list-item ng-repeat="item in array_canciones"   ng-hide=' item.eliminada == 1 '>
+
+                <input type="text" ng-model="item.id" ng-hide='true'>
+
+                <md-input-container>
+                    <label>Artista</label>
+                    <input type="text" ng-model="item.artista">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Cancion</label>
+                    <input type="text" ng-model="item.cancion" >
+                </md-input-container>
+
+                <div class="md-actions" layout="row" layout-align="end center">
+                    <md-button ng-click='eliminar(item, $event)' class="md-warn">ELIMINAR</md-button>
+                </div>
+
+            </md-list-item>
+
+            <md-input-container>
+                <md-button class="md-raised" ng-click='editarCanciones()' style="margin-right: 0;">
+                    Guardar cambios en las canciones
+                </md-button>
+            </md-input-container>
+
+        </md-list>
+
+
+        <md-button ng-click="add($event)" class="md-fab md-button md-default-theme btnAdd" target="_blank">
+            <md-tooltip md-direction="left">
+                Nueva canción
+            </md-tooltip>
+            <md-icon class='material-icons' aria-hidden="true">add</md-icon>
+        </md-button>
+
+    </div>
+
+    <div flex="10" flex style="height:30px"></div>
+    <div flex="40" flex>
+
+        <div class='md-title'>Ranking</div>
+
+        <md-list-item ng-repeat="item in array_ranking">
+
+
+            <div class='voto'>{{ item[0] }}</div>  <strong>{{ item[1].artista }}</strong>&nbsp;-&nbsp;{{ item[1].cancion }} <br/>
+            <md-divider  ng-if="!$last"></md-divider>
+
+        </md-list-item>
+
+
+        </md-list>
+
+        <md-input-container>
+            <md-button class="md-raised md-primary md-warn" ng-click='resetVotos($event)' style="margin-right: 0;">
+                Resetear todos los votos
+            </md-button>
+        </md-input-container>
+    </div>
+
+</div>

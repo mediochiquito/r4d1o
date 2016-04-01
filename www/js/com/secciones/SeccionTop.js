@@ -6,7 +6,24 @@ function SeccionTop() {
 
     setTimeout(cargar_lista, 0);
 
+    document.addEventListener("online", onOnline, false);
+
+    function onOnline() {
+        cargar_lista();
+    }
+
     function cargar_lista() {
+
+
+        try{
+            if(this.connection.type == Connection.NONE){
+                $('#top-content > div > div > div').html('<div id="no-internet">No hay conexion a internet</div>');
+                return;
+            }
+
+        }catch(e){}
+
+
         var obj = new Object();
         obj.accessToken = window.localStorage.getItem('accessToken');
 
@@ -14,11 +31,10 @@ function SeccionTop() {
                 method: "GET",
                 dataType: "json",
                 data: obj,
-                url: app.SERVER + "api/top_songs"
+                url: app.SERVER + "api/songs"
             })
             .done(listar)
             .error(function () {
-
 
             });
 
@@ -26,6 +42,12 @@ function SeccionTop() {
 
 
     function voto($elem) {
+
+        if(this.connection.type == Connection.NONE){
+            app.alerta("Debes estar conectado a internet para votar.");
+            return;
+        }
+
 
          var like = 0;
          if( $($elem).hasClass('iLike')){

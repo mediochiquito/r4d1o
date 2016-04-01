@@ -8,7 +8,6 @@ include '../init.php';
 $app = new \Slim\App;
 
 
-
 $app->get('/current_song', function (Request $request, Response $response) {
 
     $newResponse = $response->withHeader('Content-type', 'text/plain');
@@ -17,11 +16,100 @@ $app->get('/current_song', function (Request $request, Response $response) {
 
 });
 
+$app->get('/ranking', function (Request $request, Response $response) {
+
+    $rs = mysql_query('SELECT * FROM `canciones`');
+
+    $r = array();
+    while($row = mysql_fetch_object($rs)){
+
+        $rs2 = mysql_query('SELECT count(*) as total FROM `votos` WHERE cancion_id = ' . $row->id);
+        $row2 = mysql_fetch_object($rs2);
+
+        $r[] = array($row2->total, $row);
+
+    }
+
+    sort($r);
+    $r2 =  array_reverse($r);
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+    $newResponse->getBody()->write(json_encode(array('data' => $r2)));
+    return $newResponse;
+
+});
+
+
+$app->get('/users', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+
+    $rs = mysql_query('SELECT * FROM usuarios ORDER BY id DESC');
+    while ($row = mysql_fetch_object($rs)) {
+        $r[] = $row;
+    }
+
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+    $newResponse->getBody()->write(json_encode(array('data' => $r)));
+    return $newResponse;
+
+});
+
+$app->post('/contacts', function (Request $request, Response $response) {
+
+    $allPostPutVars = $request->getParsedBody();
+
+    if(mysql_query('INSERT INTO `contactos` ( `nombre`, `email`, `mensaje`) VALUES (
+
+					"'.mysql_real_escape_string($allPostPutVars['nombre']).'",
+					"'.mysql_real_escape_string($allPostPutVars['email']).'",
+                    "'.mysql_real_escape_string($allPostPutVars['mensaje']).'")')){
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse->getBody()->write(json_encode(array('message' => 'Tu mensaje ha sido enviado con exitos.')));
+        return $newResponse;
+
+    } else {
+
+        $response->getBody()->write(json_encode(array('error' => true, 'message' => 'Ha ocurrido un error')));
+        return $response;
+
+    }
+
+});
+
+
+$app->get('/contacts', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+
+    $rs = mysql_query('SELECT * FROM contactos ORDER BY id DESC');
+    while ($row = mysql_fetch_object($rs)) {
+        $r[] = $row;
+    }
+
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+    $newResponse->getBody()->write(json_encode(array('data' => $r)));
+    return $newResponse;
+
+});
+
+
+$app->delete('/ranking', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+
+    mysql_query('DELETE FROM `votos`');
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+    $newResponse->getBody()->write(json_encode(array('response' => 'ok')));
+    return $newResponse;
+
+});
 
 
 
 
-$app->get('/top_songs', function (Request $request, Response $response) {
+
+$app->get('/songs[/]', function (Request $request, Response $response) {
 
     $rs_me = mysql_query('SELECT id FROM usuarios WHERE MD5(CONCAT("vespa", id)) = "' . mysql_real_escape_string($_GET['accessToken']) . '" LIMIT 1');
     $row_me = mysql_fetch_object($rs_me);
@@ -29,21 +117,98 @@ $app->get('/top_songs', function (Request $request, Response $response) {
     $rs_mis_votos =  mysql_query('SELECT * FROM votos WHERE usuario_id = "' . mysql_real_escape_string($row_me->id) . '"');
     $array_mis_voto = array();
     while($row_mis_votos = mysql_fetch_object($rs_mis_votos)){
-        $array_mis_voto[] = $row_mis_votos->top_id;
+        $array_mis_voto[] = $row_mis_votos->cancion_id;
     }
 
-    $rs = mysql_query('SELECT * FROM top ORDER BY id ASC');
+    $rs = mysql_query('SELECT * FROM canciones ORDER BY id ASC');
     while ($row = mysql_fetch_object($rs)) {
         $row->like = in_array($row->id, $array_mis_voto);
         $r[] = $row;
-
     }
+
     $newResponse = $response->withHeader('Content-type', 'application/json');
     $newResponse->getBody()->write(json_encode(array('data' => $r)));
     return $newResponse;
 
 });
 
+
+$app->post('/songs[/]', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+    $allPostPutVars = $request->getParsedBody();
+    if(mysql_query('INSERT INTO `canciones` ( `artista`, `cancion`) VALUES (
+
+					"'.mysql_real_escape_string($allPostPutVars['artista']).'",
+                    "'.mysql_real_escape_string($allPostPutVars['cancion']).'")')){
+
+        $newResponse = $response->withHeader('Content-type', 'application/json');
+        $newResponse->getBody()->write(json_encode(array('response' => mysql_insert_id())));
+        return $newResponse;
+
+    }else{
+
+        $response->getBody()->write(json_encode(array('error' => 'Ha ocurrido un error')));
+        return $response;
+
+    }
+});
+
+
+
+
+
+$app->post('/songs/all/', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+    $allPostPutVars = $request->getParsedBody();
+
+
+     //print_r($allPostPutVars);
+
+    foreach($allPostPutVars as $cancion){
+
+        mysql_query ('UPDATE `canciones` SET
+
+					artista = "' . $cancion['artista'] . '",
+                    cancion = "' . $cancion['cancion'] . '"
+
+					WHERE id = "'. $cancion['id'] . '"');
+
+    }
+
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+    $newResponse->getBody()->write(json_encode(array('response' => 'ok')));
+    return $newResponse;
+
+});
+
+
+
+$app->delete('/songs/{id}', function (Request $request, Response $response) {
+
+    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;
+
+    $id = $request->getAttribute('id');
+
+    $newResponse = $response->withHeader('Content-type', 'application/json');
+
+    if(mysql_query('DELETE FROM  `canciones` WHERE id = "'.mysql_real_escape_string($id ).'"')){
+
+        $newResponse->getBody()->write(json_encode(array('response' => $id)));
+
+    }else{
+
+        $newResponse->getBody()->write(json_encode(array('error' => 'Ha ocurrido un error')));
+
+
+    }
+
+    return $newResponse;
+
+
+
+});
 
 
 
@@ -78,9 +243,6 @@ $app->post('/register', function (Request $request, Response $response) {
 
 
 
-
-
-
 $app->post('/voto', function (Request $request, Response $response) {
 
     $allPostPutVars = $request->getParsedBody();
@@ -91,7 +253,7 @@ $app->post('/voto', function (Request $request, Response $response) {
 
         if ($allPostPutVars['like'] == 1) {
 
-            mysql_query('INSERT INTO `votos` ( `top_id`, `usuario_id`) VALUES (
+            mysql_query('INSERT INTO `votos` ( `cancion_id`, `usuario_id`) VALUES (
                                               "' . mysql_real_escape_string($allPostPutVars['idCancion']) . '",
                                               "' . $row->id . '"
                                               );');
@@ -99,7 +261,7 @@ $app->post('/voto', function (Request $request, Response $response) {
 
             mysql_query ('DELETE FROM `votos` WHERE
 
-                                              top_id = "' . mysql_real_escape_string($allPostPutVars['idCancion']) . '"
+                                              cancion_id = "' . mysql_real_escape_string($allPostPutVars['idCancion']) . '"
 
                                               AND
 
@@ -122,131 +284,6 @@ $app->post('/voto', function (Request $request, Response $response) {
 
 });
 
-
-/*
-$app->get('/actividades/{id}', function (Request $request, Response $response) {
-
-
-
-    $id = $request->getAttribute('id');
-
-  	$rs = mysql_query('SELECT * FROM actividades WHERE actividades_id= ' . mysql_real_escape_string($id) . '  ORDER BY actividades_fecha_hora DESC');
-   	$row = mysql_fetch_object($rs);
-    $row->actividades_imagenes_galeria = json_decode($row->actividades_imagenes_galeria);
-    $newResponse = $response->withHeader('Content-type', 'application/json');
-    $newResponse->getBody()->write(json_encode(array('data' => $row)));
-    return $newResponse;
-
-
-});
-
-$app->post('/actividades/', function (Request $request, Response $response) {
-    
-    if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;  
-
-    $allPostPutVars = $request->getParsedBody();
-
-  	if(mysql_query('INSERT INTO `actividades` (
-							   		
-							   		`actividades_titulo`, 
-                    `actividades_desc`, 
-							   		`actividades_link`, 
-							   		`actividades_yt`, 
-							   		`actividades_imagen_thumb`, 
-							   		`actividades_imagenes_galeria`, 
-							   		`actividades_activo`) 	VALUES
-
-					(
-					"'.mysql_real_escape_string($allPostPutVars['actividades_titulo']).'", 
-          "'.mysql_real_escape_string($allPostPutVars['actividades_desc']).'", 
-					"'.mysql_real_escape_string($allPostPutVars['actividades_link']).'", 
-					"'.mysql_real_escape_string($allPostPutVars['actividades_yt']).'", 
-					"'.mysql_real_escape_string($allPostPutVars['actividades_imagen_thumb']).'", 
-					"'.mysql_real_escape_string(json_encode($allPostPutVars['actividades_imagenes_galeria'])).'",
-					"'.mysql_real_escape_string($allPostPutVars['actividades_activo']).'")')){
-  		
-
-      $newResponse = $response->withHeader('Content-type', 'application/json');
-  		$newResponse->getBody()->write(json_encode(array('response' => mysql_insert_id())));
-    	return $newResponse;	
-
-  	}else{
-
-  		$response->getBody()->write(json_encode(array('error' => 'Ha ocurrido un error')));
-    	return $response;	
-  		
-  	}
-
-});
-
-$app->put('/actividades/{id}', function (Request $request, Response $response) {
-  
-  if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;  
-
-  $id = $request->getAttribute('id');
-   
-	$allPostPutVars = $request->getParsedBody();
- 
-  	if(mysql_query('UPDATE `actividades` SET 
-							   		
-					actividades_titulo = "'.mysql_real_escape_string($allPostPutVars['actividades_titulo']).'", 
-          actividades_desc = "'.mysql_real_escape_string($allPostPutVars['actividades_desc']).'", 
-					actividades_link = "'.mysql_real_escape_string($allPostPutVars['actividades_link']).'", 
-					actividades_yt = "'.mysql_real_escape_string($allPostPutVars['actividades_yt']).'", 
-					actividades_imagen_thumb = "'.mysql_real_escape_string($allPostPutVars['actividades_imagen_thumb']).'", 
-					actividades_imagenes_galeria = "'.mysql_real_escape_string(json_encode($allPostPutVars['actividades_imagenes_galeria'])).'",
-					actividades_activo = "'.mysql_real_escape_string($allPostPutVars['actividades_activo']).'" 
-
-					WHERE actividades_id = "'.mysql_real_escape_string($id ).'" 
-		
-					')){
-
-  		 $newResponse = $response->withHeader('Content-type', 'application/json');  
-  		$newResponse->getBody()->write(json_encode(array('response' => $id)));
-    	return $newResponse;	
-
-  	}else{
-         $newResponse = $response->withHeader('Content-type', 'application/json');  
-  		$newResponse->getBody()->write(json_encode(array('error' => 'Ha ocurrido un error')));
-    	return $newResponse;	
-  		
-  	}
-
-   return $response;
-
-
-});
-
-$app->delete('/actividades/{id}', function (Request $request, Response $response) {
-    
-  if($_GET['access_token'] != 'CAACEdEose0cBAAGe36P5c8EBf5nZA5Wjt5oBZA6cqFBIaWZA2H00oPLudW93pbTVSdrRe3UoLun4X6NPhRov9DxN5UP3KUIGaF4vjE43xNMGlvSnmxsewiTubtJgC154G1dUrsTBqoywkLcQfoRJyn8fp4MbBRcXcUFlsoYHF8YD6G19ShMUQWX1hUJm1tcZBnB69ZAvZCYwZDZD') return;  
-    
-  $id = $request->getAttribute('id');
-   
-  $newResponse = $response->withHeader('Content-type', 'application/json');  
-
-    if(mysql_query('UPDATE `actividades` SET   actividades_eliminado = 1
-
-          WHERE actividades_id = "'.mysql_real_escape_string($id ).'" 
-    
-          ')){
-
-       
-       $newResponse->getBody()->write(json_encode(array('response' => $id)));
-     
-    }else{
-        
-      $newResponse->getBody()->write(json_encode(array('error' => 'Ha ocurrido un error')));
-   
-      
-    }
-
-   return $newResponse;
-
-
-
-});
-*/
 
 
 $app->run();

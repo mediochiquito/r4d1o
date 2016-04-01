@@ -70,6 +70,7 @@ function SeccionRegistro() {
             error: function (){
 
                 btn_enviar.habil(true);
+                app.alerta("Error");
             }
         })
 

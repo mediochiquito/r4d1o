@@ -6,8 +6,7 @@ function SeccionHome() {
     this.main = document.getElementById('SeccionHome');
     this.name = 'Home';
     var stream;
-     var url_stream = 'http://74.50.111.38/stream/';
-
+    var url_stream = 'http://74.50.111.38/stream/';
 
     // mp3
     //var url_stream = 'http://192.81.248.194:8000/;?icy=http';
@@ -27,9 +26,11 @@ function SeccionHome() {
     new Boton($('#home-btn-info'), function () {
         app.secciones.go(app.secciones._SeccionInfo, 300);
     });
+
     new Boton($('#home-btn-top'), function () {
         app.secciones.go(app.secciones._SeccionTop, 300);
     });
+
     new Boton($('#home-btn-email'), function () {
         app.secciones.go(app.secciones._SeccionContacto, 300);
     });
@@ -160,7 +161,6 @@ function SeccionHome() {
         $('#home-btn-play-pause').removeClass("enpausa");
 
 
-
         //ios
         if (app.esCordova && device.platform == "iOS") {
             stream.load()
@@ -198,21 +198,20 @@ function SeccionHome() {
             //
             //stream.play()
 
-          //  aacdecoder.mediaPlayer(url_stream);
+            //  aacdecoder.mediaPlayer(url_stream);
         }
 
         //browser
         if (!app.esCordova) {
 
             stream = new Audio(url_stream, onSuccess, onError);
-           stream.play()
+            stream.play()
         }
 
     }
 
 
     this._set = function (data) {
-
 
 
     };

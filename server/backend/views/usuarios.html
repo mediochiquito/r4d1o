@@ -1,0 +1,34 @@
+<div  layout="row">
+
+
+
+    <table width="100%">
+        <thead>
+        <td> id</td>
+        <td>nombre</td>
+        <td> apellido</td>
+        <td> email</td>
+        <td> sexo</td>
+        <td> edad</td>
+        <td>tel</td>
+        <td> fecha_hora</td>
+
+
+        </thead>
+
+        <tr ng-repeat="item in array_usuarios">
+            <td>{{item.id}}</td>
+            <td>{{item.nombre}}</td>
+            <td>{{item.apellido}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.sexo}}</td>
+            <td>{{item.edad}}</td>
+            <td>{{item.tel}}</td>
+            <td>{{item.fecha_hora}}</td>
+
+
+        </tr>
+
+    </table>
+
+</div>
