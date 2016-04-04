@@ -11,6 +11,7 @@ cordova plugin add cordova-plugin-x-toast
 cordova plugin add cordova-plugin-facebook4 --save --variable APP_ID="" --variable APP_NAME="GeoBar"
 
 
+cordova plugin add cordova-plugin-crosswalk-webview
 
 
 //ios

@@ -36,14 +36,10 @@
     font-size: 16px;
     clear: both;
     line-height: 19px;
-    /*-webkit-backface-visibility: hidden;*/
-    /*transform: translate3d(0px, 0px, 0px);*/
-    /*-webkit-transform: translate3d(0px, 0px, 0px);*/
 }
 
 #top-content .item .btn-like {
     width: 70px;
-    /* background-color: rgba(212, 48, 26, 0.88); */
     height: 60px;
     position: absolute;
     top: 0;
@@ -82,10 +78,20 @@
     position: relative;
 }
 
+
+
 #top-content .item:nth-child(1n) {
-    background-color: rgba(113, 57, 130, 0.81);
+    background-color: rgba(113, 57, 130, 0.8);
 }
 
 #top-content .item:nth-child(2n) {
-    background-color: rgba(101, 50, 126, 0.83);
+    background-color: rgba(101, 50, 126, 0.8);
+}
+
+#top-content .item.semanales:nth-child(1n) {
+    background-color: rgba(163,0,126,0.8) !important;
+}
+
+#top-content .item.semanales:nth-child(2n) {
+    background-color: rgba(140,0,126,0.8) !important;
 }

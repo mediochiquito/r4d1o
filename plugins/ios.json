@@ -10,9 +10,6 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.tata.radio"
         },
@@ -49,7 +46,7 @@
         "nl.x-services.plugins.backgroundaudio": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },

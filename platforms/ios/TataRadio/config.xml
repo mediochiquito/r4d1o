@@ -31,9 +31,6 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
-    <feature name="Device">
-        <param name="ios-package" value="CDVDevice" />
-    </feature>
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
         <param name="onload" value="true" />
@@ -69,6 +66,9 @@
     <feature name="BackgroundAudio">
         <param name="ios-package" value="BackgroundAudio" />
         <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
@@ -112,16 +112,12 @@
     <preference name="Fullscreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="200" />
-    <preference name="AutoHideSplashcordovaScreen" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#871e75" />
     <preference name="StatusBarStyle" value="blackopaque" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="22" />
-    <preference name="xwalkVersion" value="17+" />
-    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
-    <preference name="xwalkMode" value="embedded" />
-    <preference name="xwalkMultipleApk" value="true" />
 </widget>

@@ -29,10 +29,10 @@
         <icon density="mdpi" src="res/icon/android/mdpi.png" />
         <icon density="hdpi" src="res/icon/android/hdpi.png" />
         <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
-        <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
-        <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
-        <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
-        <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
+        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -63,16 +63,12 @@
     <preference name="Fullscreen" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreenDelay" value="3000" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
-    <preference name="AutoHideSplashcordovaScreen" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#871e75" />
     <preference name="StatusBarStyle" value="blackopaque" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="22" />
-    <preference name="xwalkVersion" value="17+" />
-    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
-    <preference name="xwalkMode" value="embedded" />
-    <preference name="xwalkMultipleApk" value="true" />
 </widget>

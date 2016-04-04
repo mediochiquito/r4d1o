@@ -27,8 +27,8 @@ function App() {
 
         self.secciones = new Secciones();
 
-        //  app.secciones.go(app.secciones._SeccionTop, 300);
-        app.secciones.go(app.secciones._SeccionHome, 300);
+        // app.secciones.go(app.secciones._SeccionTop, 300);
+         app.secciones.go(app.secciones._SeccionHome, 300);
 
         if ($esCordova) {
 

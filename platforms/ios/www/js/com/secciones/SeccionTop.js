@@ -89,14 +89,17 @@ function SeccionTop() {
     function listar(json) {
 
         var html = "";
-
+        var bulce = 0;
         json.data.forEach(function (item) {
 
 
             var like = "";
             if (item.like) like = "iLike";
+            var primeras = "";
+            if(bulce<12) primeras = "semanales";
+            bulce++;
 
-            html += "<div class='item' >" +
+            html += "<div class='item " + primeras + "' >" +
                 "<div class='btn-like btn " + like + "' data-btn-fx='zoom' data-id-cancion='" + item.id + "'>" +
                 "<img src='img/top/corazon.png' />" +
                 "</div>" +

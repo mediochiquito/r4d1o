@@ -9,10 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -49,23 +45,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"17+\" name=\"xwalkVersion\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"true\" name=\"xwalkMultipleApk\" />",
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -92,7 +72,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
@@ -100,10 +80,6 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         }
                     ],
@@ -125,9 +101,6 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-file": {
@@ -166,19 +139,12 @@
         "nl.x-services.plugins.backgroundaudio": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },
     "dependent_plugins": {},
     "modules": [
-        {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
-            "clobbers": [
-                "device"
-            ]
-        },
         {
             "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
             "id": "cordova-plugin-file.DirectoryEntry",
@@ -417,11 +383,17 @@
         {
             "file": "plugins/cordova-plugin-x-toast/test/tests.js",
             "id": "cordova-plugin-x-toast.tests"
+        },
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-console": "1.0.2",
-        "cordova-plugin-device": "1.1.1",
         "cordova-plugin-file": "4.1.1",
         "cordova-plugin-media": "2.1.0",
         "cordova-plugin-network-information": "1.2.0",
@@ -434,6 +406,6 @@
         "cordova-plugin-whitelist": "1.2.1",
         "cordova-plugin-x-toast": "2.5.0",
         "nl.x-services.plugins.backgroundaudio": "1.0.1",
-        "cordova-plugin-crosswalk-webview": "1.6.1"
+        "cordova-plugin-device": "1.1.1"
     }
 }

@@ -5,6 +5,13 @@
     background-color: #DEDEDE;
     width: 290px;
 }
+.num-cancion{
+    padding: 7px;
+    background-color: #E0E2E2;
+    margin: 0px 0px 17px 0px;
+    margin-right: 10px;
+}
+
 .viewport,.content{
     width: 100% !important;
 }

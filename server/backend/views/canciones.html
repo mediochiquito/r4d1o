@@ -6,9 +6,11 @@
 
         <md-list flex='100'>
 
-            <md-list-item ng-repeat="item in array_canciones"   ng-hide=' item.eliminada == 1 '>
+            <md-list-item ng-repeat="item in array_canciones track by $index"   ng-hide=' item.eliminada == 1 '>
 
                 <input type="text" ng-model="item.id" ng-hide='true'>
+
+                <div class='num-cancion'>{{ $index + 1 }}</div>
 
                 <md-input-container>
                     <label>Artista</label>
@@ -20,7 +22,7 @@
                     <input type="text" ng-model="item.cancion" >
                 </md-input-container>
 
-                <div class="md-actions" layout="row" layout-align="end center">
+                <div style='display:none' class="md-actions" layout="row" layout-align="end center">
                     <md-button ng-click='eliminar(item, $event)' class="md-warn">ELIMINAR</md-button>
                 </div>
 
@@ -35,7 +37,7 @@
         </md-list>
 
 
-        <md-button ng-click="add($event)" class="md-fab md-button md-default-theme btnAdd" target="_blank">
+        <md-button style='display:none' ng-click="add($event)" class="md-fab md-button md-default-theme btnAdd" target="_blank">
             <md-tooltip md-direction="left">
                 Nueva canción
             </md-tooltip>

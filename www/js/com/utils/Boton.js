@@ -38,7 +38,7 @@ function Boton($element, $callback, $callback_over, $callback_out) {
     function do_click(evt) {
 
         try {
-            if (device.platform == "Android") navigator.vibrate(100);
+            if (device.platform == "Android") navigator.vibrate(50);
         } catch (e) {
         }
 

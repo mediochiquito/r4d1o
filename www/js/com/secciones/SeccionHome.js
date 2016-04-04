@@ -86,13 +86,18 @@ function SeccionHome() {
 
         $.ajax({
                 method: "GET",
+                cache:false,
                 url: app.SERVER + "api/current_song"
+
             })
             .done(function (msg) {
 
-                setNombreCancion(msg);
+
 
                 setTimeout(consultar_cancion_actual, 3000);
+                setNombreCancion(msg);
+
+
 
             })
             .error(function () {
@@ -124,8 +129,9 @@ function SeccionHome() {
         }
 
         if (app.esCordova && device.platform == "Android") {
-
-            navigator.RADIO.setInfo(array_artita_cancion[0], array_artita_cancion[1]);
+            try{
+                navigator.RADIO.setInfo(array_artita_cancion[0], array_artita_cancion[1]);
+            }catch(e){}
 
         }
 
