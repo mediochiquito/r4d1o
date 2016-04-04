@@ -47,6 +47,26 @@
                         {
                             "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"17+\" name=\"xwalkVersion\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"true\" name=\"xwalkMultipleApk\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -72,7 +92,7 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
@@ -80,6 +100,10 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         }
                     ],
@@ -140,6 +164,9 @@
             "PACKAGE_NAME": "com.tata.radio"
         },
         "nl.x-services.plugins.backgroundaudio": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },
@@ -406,6 +433,7 @@
         "cordova-plugin-vibration": "2.1.0",
         "cordova-plugin-whitelist": "1.2.1",
         "cordova-plugin-x-toast": "2.5.0",
-        "nl.x-services.plugins.backgroundaudio": "1.0.1"
+        "nl.x-services.plugins.backgroundaudio": "1.0.1",
+        "cordova-plugin-crosswalk-webview": "1.6.1"
     }
 }

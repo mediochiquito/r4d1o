@@ -7,8 +7,9 @@ function App() {
     this.loading = null;
     this.esCordova = false;
     this.uuid = 'dev';
-    this.SERVER = 'http://192.168.235.140/r4d1o/server/';
+    //this.SERVER = 'http://192.168.235.140/r4d1o/server/';
     //this.SERVER = 'http://192.168.0.3/r4d1o/server/';
+    this.SERVER = 'http://dev.metamorf.com.uy/radiotata/';
     var en_seccion;
     var toolbar;
 
@@ -20,14 +21,14 @@ function App() {
 
         app.esCordova = $esCordova;
 
-        if(app.esCordova) app.uuid =  device.uuid;
+        if (app.esCordova) app.uuid = device.uuid;
 
         if (window.localStorage.getItem('accessToken') == null) window.localStorage.setItem('accessToken', 0);
 
         self.secciones = new Secciones();
 
-        app.secciones.go(app.secciones._SeccionTop, 300);
-//      app.secciones.go(app.secciones._SeccionHome, 300);
+        //  app.secciones.go(app.secciones._SeccionTop, 300);
+        app.secciones.go(app.secciones._SeccionHome, 300);
 
         if ($esCordova) {
 

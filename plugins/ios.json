@@ -48,6 +48,9 @@
         },
         "nl.x-services.plugins.backgroundaudio": {
             "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.tata.radio"
         }
     },
     "dependent_plugins": {}

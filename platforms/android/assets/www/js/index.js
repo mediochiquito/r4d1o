@@ -38,15 +38,25 @@ var cordovaApp = {
 
             if (device.platform == "Android") {
 
-                navigator.RADIO.initialize(function (s) {
-                    if (s == 'STOPPED-FROM-NOTIFICATION') {
-                        app.secciones._SeccionHome.stopAudioFromNotification()
-                    }
+                document.addEventListener("online", function () {
+                    navigator.RADIO.initialize(function (s) {
+                        if (s == 'STOPPED-FROM-NOTIFICATION') {
+                            app.secciones._SeccionHome.stopAudioFromNotification()
+                        }
+                    }, function (s) {
+                        alert('ERROR RADIO.initialize');
+                    });
+                }, false);
 
-                }, function (s) {
-                    alert('ERROR RADIO.initialize');
-                });
-
+                if (navigator.connection.type != Connection.NONE) {
+                    navigator.RADIO.initialize(function (s) {
+                        if (s == 'STOPPED-FROM-NOTIFICATION') {
+                            app.secciones._SeccionHome.stopAudioFromNotification()
+                        }
+                    }, function (s) {
+                        alert('ERROR RADIO.initialize');
+                    });
+                }
 
             }
 

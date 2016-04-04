@@ -36,6 +36,9 @@
     font-size: 16px;
     clear: both;
     line-height: 19px;
+    /*-webkit-backface-visibility: hidden;*/
+    /*transform: translate3d(0px, 0px, 0px);*/
+    /*-webkit-transform: translate3d(0px, 0px, 0px);*/
 }
 
 #top-content .item .btn-like {

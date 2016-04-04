@@ -19,3 +19,11 @@
 #info-content > div > div > div{
     position: relative;
 }
+.info-row{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.info-row span{font-family: 'roboto-bold-webfont';}
+.info-row a{
+    color: #ECC7E7;
+}

@@ -1,11 +1,91 @@
 
-#top-content {position: absolute;width: 100%;height: 100%;top: 0;padding: 100px 0 0 0;}
-#top-content > div{
+#top-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 100px 0 0 0;
+}
+
+#top-content > div {
     margin: 0 auto;
     overflow: hidden;
     height: 100%;
 }
-#top-content > div > div{color: #fff;font-size: 12px;padding: 2px 18px 2px 2px;height: 92%;overflow: auto; -webkit-overflow-scrolling: touch; margin: 13px 5px 13px 13px;}
-#top-content > div > div > div{
+#no-internet{
+    text-align: center;
+    margin-top: 70px;
+}
+#top-content > div > div {
+    color: #fff;
+    font-size: 12px;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#top-content > div > div > div {
     position: relative;
+}
+#no-internet{
+    text-align: center;
+    margin-top: 70px;
+}
+#top-content .item {
+    min-height: 60px;
+    font-size: 16px;
+    clear: both;
+    line-height: 19px;
+    /*-webkit-backface-visibility: hidden;*/
+    /*transform: translate3d(0px, 0px, 0px);*/
+    /*-webkit-transform: translate3d(0px, 0px, 0px);*/
+}
+
+#top-content .item .btn-like {
+    width: 70px;
+    /* background-color: rgba(212, 48, 26, 0.88); */
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#top-content .item .btn-like > img {
+    width: 70px;
+    position: absolute;
+    top: -81px;
+    left: 4px;
+}
+#top-content .item .btn-like.iLike > img {
+    top: -3px;
+}
+
+#top-content .item .data {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 80px;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+#top-content .item .data .artista {
+    position: relative;
+    font-family: 'roboto-bold-webfont';
+}
+
+#top-content .item .data .cancion {
+    position: relative;
+}
+
+#top-content .item:nth-child(1n) {
+    background-color: rgba(113, 57, 130, 0.81);
+}
+
+#top-content .item:nth-child(2n) {
+    background-color: rgba(101, 50, 126, 0.83);
 }

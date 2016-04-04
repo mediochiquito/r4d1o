@@ -69,8 +69,21 @@
 
 #home-menu-nav .home-btn-nav > img {
     width: 30px;
-    height: 30px;margin-top: 10px;
-}cordova
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+#home-btn-top{
+    /*background-image: url(img/home/btn-email.svg);*/
+}
+
+#home-menu-nav .home-btn-nav .btn-icon-btn {
+    /*width: 30px;*/
+    /*height: 30px;*/
+    margin-top: 10px;
+
+}
 #home-btn-info{
 
 }

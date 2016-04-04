@@ -7,7 +7,16 @@
     padding-top: 100px;
 
 }
-#contacto-content > div{width: 80%;margin: 20px auto 0;}
+#contacto-content > div{
+    margin: 0 auto;
+    overflow: scroll;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+
+#contacto-content > div>div{width: 80%;margin: 20px auto 0;}
 #contacto-content input {
     width: 100%;
     border: none;
@@ -59,4 +68,13 @@
 
 ::-webkit-input-placeholder {
     color: #FFFFFF;
+}
+#contacto-btn-enviar {
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000;
+    padding: 7px 20px 7px 20px;
+    float: right;
+    margin-top: 13px;
+    margin-bottom: 30px;
 }

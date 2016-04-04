@@ -14,14 +14,13 @@ function SeccionTop() {
 
     function cargar_lista() {
 
-
-        try{
-            if(this.connection.type == Connection.NONE){
+        try {
+            if (navigator.connection.type == Connection.NONE) {
                 $('#top-content > div > div > div').html('<div id="no-internet">No hay conexion a internet</div>');
                 return;
             }
-
-        }catch(e){}
+        } catch (e) {
+        }
 
 
         var obj = new Object();
@@ -42,21 +41,22 @@ function SeccionTop() {
 
 
     function voto($elem) {
-
-        if(this.connection.type == Connection.NONE){
-            app.alerta("Debes estar conectado a internet para votar.");
-            return;
+        try {
+            if (navigator.connection.type == Connection.NONE) {
+                app.alerta("Debes estar conectado a internet para votar.");
+                return;
+            }
+        } catch (e) {
         }
 
-
-         var like = 0;
-         if( $($elem).hasClass('iLike')){
-             like = 0;
-             $($elem).removeClass('iLike');
-         }else{
-             like = 1;
-             $($elem).addClass('iLike');
-         }
+        var like = 0;
+        if ($($elem).hasClass('iLike')) {
+            like = 0;
+            $($elem).removeClass('iLike');
+        } else {
+            like = 1;
+            $($elem).addClass('iLike');
+        }
 
         var obj = new Object();
         obj.idCancion = $($elem).attr('data-id-cancion');
@@ -68,17 +68,20 @@ function SeccionTop() {
             type: 'post',
             dataType: 'json',
             data: obj,
-            success: function (json){
+            success: function (json) {
 
-                if(json.error) {
+                if (json.error) {
                     $($elem).removeClass('iLike');
-                    app.secciones.go(app.secciones._SeccionRegistro, 300, {callback:function (){
-                        voto($elem);
-                    }});
+                    app.secciones.go(app.secciones._SeccionRegistro, 300, {
+                        callback: function () {
+                            voto($elem);
+                        }
+                    });
 
                 }
             },
-            error: function (){}
+            error: function () {
+            }
         })
     }
 
@@ -91,17 +94,17 @@ function SeccionTop() {
 
 
             var like = "";
-            if(item.like) like = "iLike";
+            if (item.like) like = "iLike";
 
             html += "<div class='item' >" +
-                    "<div class='btn-like btn "+like+"' data-btn-fx='zoom' data-id-cancion='" + item.id + "'>" +
-                    "<img src='img/top/corazon.png' />" +
-                    "</div>" +
-                    "<div class='data'>" +
-                    "<div class='artista'>" + item.artista + "</div>" +
-                    "<div class='cancion'>" + item.cancion + "</div>" +
-                    "</div>" +
-                    "</div>";
+                "<div class='btn-like btn " + like + "' data-btn-fx='zoom' data-id-cancion='" + item.id + "'>" +
+                "<img src='img/top/corazon.png' />" +
+                "</div>" +
+                "<div class='data'>" +
+                "<div class='artista'>" + item.artista + "</div>" +
+                "<div class='cancion'>" + item.cancion + "</div>" +
+                "</div>" +
+                "</div>";
 
         });
 
@@ -115,9 +118,11 @@ function SeccionTop() {
 
                     if (window.localStorage.getItem('accessToken') == 0) {
 
-                        app.secciones.go(app.secciones._SeccionRegistro, 300, {callback:function (){
-                            voto(elem);
-                        }});
+                        app.secciones.go(app.secciones._SeccionRegistro, 300, {
+                            callback: function () {
+                                voto(elem);
+                            }
+                        });
 
                     } else {
 

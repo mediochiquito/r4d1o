@@ -11,14 +11,11 @@ function Secciones(){
 	this._SeccionTop = new SeccionTop();
 	this._SeccionTop.ocultar(0);
 
-
 	this._SeccionContacto = new SeccionContacto();
 	this._SeccionContacto.ocultar(0);
 
-    //
-	//this._SeccionMidiendo = new SeccionMidiendo();
-	//this._SeccionMidiendo.ocultar(0);
-
+    this._SeccionRegistro = new SeccionRegistro();
+	this._SeccionRegistro.ocultar(0);
 
 	var despazada = false;
 	var historia = new Array();
@@ -26,12 +23,29 @@ function Secciones(){
 	var cambiando_historia = false;
     var inter;
 
-
 	document.addEventListener("backbutton", backKeyDown, false);
 
 	function backKeyDown(){
 
+		if(!cambiando_historia){
 
+			if(historia.length<=1) 	{
+
+				navigator.app.exitApp();
+				e.preventDefault();
+
+			}else{
+
+				cambiando_historia = true;
+				if(historia.length>1) historia.pop();
+				var penultimo_elemento = historia[historia.length-1];
+				app.secciones.go(penultimo_elemento[0], 300, penultimo_elemento[1], false);
+				setTimeout(function (){
+					cambiando_historia = false;
+				}, 500)
+			}
+
+		}
 
 	}
 

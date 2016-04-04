@@ -20,6 +20,21 @@ function Boton($element, $callback, $callback_over, $callback_out) {
     $(this.main).bind("touchstart", do_mouseover);
     $(this.main).bind("click", do_click);
 
+
+
+    this.habil = function ($b){
+
+        if($b){
+
+            $(self.main).removeClass('btn-disabled');
+
+        }else{
+            $(self.main).addClass('btn-disabled');
+
+        }
+
+    }
+
     function do_click(evt) {
 
         try {

@@ -263,7 +263,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.0",
     "cordova-plugin-whitelist": "1.2.1",
     "cordova-plugin-x-toast": "2.5.0",
-    "nl.x-services.plugins.backgroundaudio": "1.0.1"
+    "nl.x-services.plugins.backgroundaudio": "1.0.1",
+    "cordova-plugin-crosswalk-webview": "1.6.1"
 };
 // BOTTOM OF METADATA
 });

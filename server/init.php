@@ -20,9 +20,10 @@
 		define("SERVER", "http://".$_SERVER['HTTP_HOST']."/radiotata/", false);
 
 		define("DB_HOST", "localhost");
-		define("DB_USER", "root");
-		define("DB_PASS", "root");
-		define("DB_NAME", "radiotata");
+
+		define("DB_USER", "radiotata");
+		define("DB_PASS", "tg9Lp3%5");
+		define("DB_NAME", "metamorf_radiotata");
 
 	}else{
 

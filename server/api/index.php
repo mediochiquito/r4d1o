@@ -28,6 +28,7 @@ $app->get('/ranking', function (Request $request, Response $response) {
 
         $r[] = array($row2->total, $row);
 
+
     }
 
     sort($r);
@@ -124,6 +125,7 @@ $app->get('/songs[/]', function (Request $request, Response $response) {
     while ($row = mysql_fetch_object($rs)) {
         $row->like = in_array($row->id, $array_mis_voto);
         $r[] = $row;
+
     }
 
     $newResponse = $response->withHeader('Content-type', 'application/json');

@@ -7,11 +7,12 @@ function SeccionHome() {
     this.name = 'Home';
     var stream;
     var url_stream = 'http://74.50.111.38/stream/';
-
-    // mp3
-    //var url_stream = 'http://192.81.248.194:8000/;?icy=http';
     var ecuchando = false;
     var buffereando = false;
+
+    document.addEventListener("online", onOnline, false);
+    document.addEventListener("offline", onOffline, false);
+
 
     setTimeout(consultar_cancion_actual, 100);
 
@@ -47,13 +48,22 @@ function SeccionHome() {
     }
 
 
+    function onOnline() {
+
+    }
+
+    function onOffline() {
+        detenerRadio();
+    }
+
+
     function onSuccess() {
         console.log("playAudio():Audio Success");
         buffereando = false;
     }
 
     function onError(error) {
-        alert('code: ' + error.code + '\n' +
+        app.alerta('code: ' + error.code + '\n' +
             'message: ' + error.message + '\n');
         buffereando = false;
     }
@@ -61,6 +71,18 @@ function SeccionHome() {
 
     function consultar_cancion_actual() {
 
+        try {
+
+            if (navigator.connection.type == Connection.NONE) {
+
+                $('#home-txt-artista').html('Ocurrio un error!');
+                $('#home-txt-cancion').html('(No hay conexion a internet)');
+                setTimeout(consultar_cancion_actual, 3000);
+                return;
+            }
+
+        } catch (e) {
+        }
 
         $.ajax({
                 method: "GET",
@@ -153,6 +175,12 @@ function SeccionHome() {
 
 
     function iniciarRadio() {
+
+        if(navigator.connection.type == Connection.NONE){
+            app.alerta("Debes estar conectado a internet para escuchar.");
+            return;
+        }
+
 
         ecuchando = true;
         if (buffereando) return;
