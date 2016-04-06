@@ -13,8 +13,12 @@ function SeccionHome() {
     document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 
+    setTimeout(function (){
 
-    setTimeout(consultar_cancion_actual, 100);
+        consultar_cancion_actual();
+        iniciarRadio();
+
+    }, 100);
 
     new Boton($('#home-btn-play-pause'), function () {
         if (ecuchando) {
