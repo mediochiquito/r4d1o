@@ -8,7 +8,7 @@ cordova plugin add cordova-plugin-splashscreen
 cordova plugin add cordova-plugin-vibration
 cordova plugin add cordova-plugin-statusbar
 cordova plugin add cordova-plugin-x-toast
-cordova plugin add cordova-plugin-facebook4 --save --variable APP_ID="" --variable APP_NAME="GeoBar"
+cordova plugin add https://github.com/jeduan/cordova-plugin-facebook4 --save --variable APP_ID="1690832551175845" --variable APP_NAME="Súper Radio Ta-Ta"
 
 
 cordova plugin add cordova-plugin-crosswalk-webview
@@ -27,10 +27,13 @@ cordova plugin add /Users/mateo/developer/cordova-plugin
 
 
 
-// busquedas
+// otros busquedas
 cordova-plugin-streaming
 cordova plugin add https://github.com/keosuofficial/cordova-audio-stream-plugin.git
 cordova plugin add cordova-media-with-compression
 cordova  plugin add https://github.com/wnyc/cordova-plugin-playerhater.git
-
 cordova plugin add https://github.com/eworx/av-audio-session-adapter
+
+
+
+keytool -genkey -v -keystore radiotata-my-release-key.keystore -alias motoneta -keyalg RSA -keysize 2048 -validity 10000
