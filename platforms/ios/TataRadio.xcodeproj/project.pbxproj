@@ -415,7 +415,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolfo Canabal (5S76QH63SA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rodolfo Canabal (T6PVDK844N)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -426,7 +426,7 @@
 				INFOPLIST_FILE = "TataRadio/TataRadio-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = TataRadio;
-				PROVISIONING_PROFILE = "b99c82b8-e700-4986-b0fc-d7e791b4cf86";
+				PROVISIONING_PROFILE = "1e5e801e-aacb-4a95-9f14-050cb3172565";
 			};
 			name = Debug;
 		};
@@ -439,7 +439,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolfo Canabal (5S76QH63SA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rodolfo Canabal (T6PVDK844N)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TataRadio/TataRadio-Prefix.pch";
@@ -447,7 +447,7 @@
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "TataRadio/TataRadio-Info.plist";
 				PRODUCT_NAME = TataRadio;
-				PROVISIONING_PROFILE = "b99c82b8-e700-4986-b0fc-d7e791b4cf86";
+				PROVISIONING_PROFILE = "1e5e801e-aacb-4a95-9f14-050cb3172565";
 			};
 			name = Release;
 		};
