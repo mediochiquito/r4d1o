@@ -26,6 +26,7 @@ cordova plugin add /Users/mateo/developer/cordova-plugin
 
 
 
+cordova plugin add cordova-plugin-x-socialsharing
 
 // otros busquedas
 cordova-plugin-streaming

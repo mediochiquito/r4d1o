@@ -9,6 +9,58 @@
                 "parents": {
                     "/*": [
                         {
+                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"17+\" name=\"xwalkVersion\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"true\" name=\"xwalkMultipleApk\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
@@ -45,55 +97,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"17+\" name=\"xwalkVersion\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"true\" name=\"xwalkMultipleApk\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"android-package\" value=\"org.apache.cordova.facebook.ConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://m.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://graph.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://api.facebook.com\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"android-minSdkVersion\" value=\"15\" />",
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -102,6 +106,14 @@
             "AndroidManifest.xml": {
                 "parents": {
                     "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "count": 1
+                        },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 2
@@ -119,31 +131,11 @@
                             "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
                             "count": 1
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-                            "count": 1
-                        }
-                    ],
-                    "/manifest/application": [
-                        {
-                            "xml": "<service android:name=\"com.imsd.radio.RadioPlayerService\"><intent-filter><action android:name=\"com.imsd.radio.INTENT_PLAYPAUSE\" /><action android:name=\"com.imsd.radio.INTENT_OPENPLAYER\" /><action android:name=\"com.imsd.radio.INTENT_CANCEL\" /></intent-filter></service>",
-                            "count": 1
-                        }
-                    ],
-                    "/manifest": [
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ],
@@ -158,6 +150,18 @@
                         },
                         {
                             "xml": "<activity android:configChanges=\"keyboard|keyboardHidden|screenLayout|screenSize|orientation\" android:label=\"@string/fb_app_name\" android:name=\"com.facebook.FacebookActivity\" android:theme=\"@android:style/Theme.Translucent.NoTitleBar\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<service android:name=\"com.imsd.radio.RadioPlayerService\"><intent-filter><action android:name=\"com.imsd.radio.INTENT_PLAYPAUSE\" /><action android:name=\"com.imsd.radio.INTENT_OPENPLAYER\" /><action android:name=\"com.imsd.radio.INTENT_CANCEL\" /></intent-filter></service>",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ]
@@ -181,6 +185,17 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1690832551175845",
+            "APP_NAME": "Súper Radio Ta-Ta",
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-file": {
@@ -219,20 +234,26 @@
         "nl.x-services.plugins.backgroundaudio": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-facebook4": {
-            "APP_ID": "1690832551175845",
-            "APP_NAME": "Súper Radio Ta-Ta",
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.tata.radio"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "id": "cordova-plugin-device.device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
+        },
         {
             "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
             "id": "cordova-plugin-file.DirectoryEntry",
@@ -473,22 +494,19 @@
             "id": "cordova-plugin-x-toast.tests"
         },
         {
-            "file": "plugins/cordova-plugin-device/www/device.js",
-            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
             "clobbers": [
-                "device"
-            ]
-        },
-        {
-            "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
-            "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
-            "clobbers": [
-                "facebookConnectPlugin"
+                "cordova.InAppBrowser.open",
+                "window.open"
             ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-console": "1.0.2",
+        "cordova-plugin-crosswalk-webview": "1.6.1",
+        "cordova-plugin-device": "1.1.1",
+        "cordova-plugin-facebook4": "1.7.1",
         "cordova-plugin-file": "4.1.1",
         "cordova-plugin-media": "2.1.0",
         "cordova-plugin-network-information": "1.2.0",
@@ -501,8 +519,6 @@
         "cordova-plugin-whitelist": "1.2.1",
         "cordova-plugin-x-toast": "2.5.0",
         "nl.x-services.plugins.backgroundaudio": "1.0.1",
-        "cordova-plugin-device": "1.1.1",
-        "cordova-plugin-crosswalk-webview": "1.6.1",
-        "cordova-plugin-facebook4": "1.7.1"
+        "cordova-plugin-inappbrowser": "1.2.1"
     }
 }

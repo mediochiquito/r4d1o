@@ -126,7 +126,7 @@ function SeccionRegistro() {
         obj.sexo = $('input[name=gender]:checked').val();
         obj.edad = $('#registro-edad').val();
         obj.tel = $('#registro-tel').val();
-        obj.fbid = fbid
+        obj.fbid = fbid;
         $.ajax({
 
             url: app.SERVER + 'api/register',

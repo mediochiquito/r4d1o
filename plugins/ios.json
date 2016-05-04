@@ -10,7 +10,21 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.tata.radio"
         },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1690832551175845",
+            "APP_NAME": "Súper Radio Ta-Ta",
+            "PACKAGE_NAME": "com.tata.radio"
+        },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-media": {
@@ -44,17 +58,6 @@
             "PACKAGE_NAME": "com.tata.radio"
         },
         "nl.x-services.plugins.backgroundaudio": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-facebook4": {
-            "APP_ID": "1690832551175845",
-            "APP_NAME": "Súper Radio Ta-Ta",
             "PACKAGE_NAME": "com.tata.radio"
         }
     },

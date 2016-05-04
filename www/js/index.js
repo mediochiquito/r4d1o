@@ -37,7 +37,7 @@ var cordovaApp = {
         if ($esCordova) {
 
             //navigator.splashscreen.show();
-
+            
             if (device.platform == "Android") {
 
                 document.addEventListener("online", function () {

@@ -159,10 +159,10 @@ public class ConnectPlugin extends CordovaPlugin {
         messageDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
             @Override
             public void onSuccess(Sharer.Result result) {
-                if (showDialogContext != null) {
-                    showDialogContext.success();
-                    showDialogContext = null;
-                }
+                                 if (showDialogContext != null) {
+                                     showDialogContext.success();
+                                     showDialogContext = null;
+                                 }
             }
 
             @Override

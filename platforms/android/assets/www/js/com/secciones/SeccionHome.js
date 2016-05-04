@@ -9,11 +9,13 @@ function SeccionHome() {
     var url_stream = 'http://74.50.111.38/stream/';
     var ecuchando = false;
     var buffereando = false;
-
+    var escuchando_artista = '';
+    var escuchando_cancion = '';
     document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 
-    setTimeout(function (){
+
+    setTimeout(function () {
 
         consultar_cancion_actual();
         iniciarRadio();
@@ -27,6 +29,60 @@ function SeccionHome() {
             iniciarRadio();
         }
     });
+
+
+    function compartir_cancion() {
+        if (app.esCordova) {
+
+            // facebookConnectPlugin.showDialog({
+            //         method: "share",
+            //         picture:'https://www.google.co.jp/logos/doodles/2014/doodle-4-google-2014-japan-winner-5109465267306496.2-hp.png',
+            //         name:'Test Post',
+            //         message:'First photo post',
+            //         caption: 'Testing using phonegap plugin',
+            //         description: 'Posting photo using phonegap facebook plugin'
+            //     }, function (response) {
+            //         console.log(response)
+            //     }, function (response) {
+            //         console.log(response)
+            //     }
+            // );
+
+
+            // var urt_store = "https://play.google.com/store?hl=es";
+            // if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
+
+            
+
+            // facebookConnectPlugin.showDialog({
+            //
+            //     method: "share",
+            //     app_id: 1690832551175845,
+            //     href: (app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista),
+            //     caption: "Such caption, very feed.",
+            //     description: "Much description",
+            //     picture: app.SERVER + 'img/art.jpg',
+            //     share_native: true
+            // }, function () {
+            // });
+
+            // facebookConnectPlugin.showDialog({
+            //
+            //     method: "feed",
+            //     link:app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
+            //     caption: "Such caption, very feed."
+            //
+            // }, function () {
+            // });
+
+
+           // window.plugins.socialsharing.share("Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + ' en Super Radio Ta-Ta', "Super Radio Ta-Ta", app.SERVER + 'img/art.jpg', urt_store);
+        }
+    }
+
+
+    new Boton($('#home-btn-fb'), compartir_cancion);
+
 
     new Boton($('#home-btn-info'), function () {
         app.secciones.go(app.secciones._SeccionInfo, 300);
@@ -45,7 +101,7 @@ function SeccionHome() {
 
         RemoteCommand.enabled('nextTrack', false);
         RemoteCommand.enabled('previousTrack', false);
-        RemoteCommand.on('play', iniciarRadio)
+        RemoteCommand.on('play', iniciarRadio);
         RemoteCommand.on('pause', detenerRadio);
 
         stream = new Audio(url_stream, onSuccess, onError);
@@ -90,17 +146,15 @@ function SeccionHome() {
 
         $.ajax({
                 method: "GET",
-                cache:false,
+                cache: false,
                 url: app.SERVER + "api/current_song"
 
             })
             .done(function (msg) {
 
 
-
                 setTimeout(consultar_cancion_actual, 3000);
                 setNombreCancion(msg);
-
 
 
             })
@@ -120,6 +174,10 @@ function SeccionHome() {
         $('#home-txt-artista').html(array_artita_cancion[0]);
         $('#home-txt-cancion').html(array_artita_cancion[1]);
 
+
+        escuchando_artista = array_artita_cancion[0];
+        escuchando_cancion = array_artita_cancion[1];
+
         if (app.esCordova && device.platform == "iOS") {
 
             NowPlaying.set({
@@ -133,9 +191,10 @@ function SeccionHome() {
         }
 
         if (app.esCordova && device.platform == "Android") {
-            try{
+            try {
                 navigator.RADIO.setInfo(array_artita_cancion[0], array_artita_cancion[1]);
-            }catch(e){}
+            } catch (e) {
+            }
 
         }
 
@@ -186,7 +245,7 @@ function SeccionHome() {
 
     function iniciarRadio() {
 
-        if(navigator.connection.type == Connection.NONE){
+        if (navigator.connection.type == Connection.NONE) {
             app.alerta("Debes estar conectado a internet para escuchar.");
             return;
         }
@@ -201,8 +260,8 @@ function SeccionHome() {
 
         //ios
         if (app.esCordova && device.platform == "iOS") {
-            stream.load()
-            stream.play()
+            stream.load();
+            stream.play();
             NowPlaying.set({
                 artwork: app.SERVER + 'img/art.jpg',
                 albumTitle: "Cargando...",

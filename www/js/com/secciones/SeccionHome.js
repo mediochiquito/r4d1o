@@ -32,28 +32,55 @@ function SeccionHome() {
 
 
     function compartir_cancion() {
-
         if (app.esCordova) {
 
-            var urt_store = "https://play.google.com/store?hl=es";
-            if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
+            // facebookConnectPlugin.showDialog({
+            //         method: "share",
+            //         picture:'https://www.google.co.jp/logos/doodles/2014/doodle-4-google-2014-japan-winner-5109465267306496.2-hp.png',
+            //         name:'Test Post',
+            //         message:'First photo post',
+            //         caption: 'Testing using phonegap plugin',
+            //         description: 'Posting photo using phonegap facebook plugin'
+            //     }, function (response) {
+            //         console.log(response)
+            //     }, function (response) {
+            //         console.log(response)
+            //     }
+            // );
 
+
+            // var urt_store = "https://play.google.com/store?hl=es";
+            // if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
+
+            //
             facebookConnectPlugin.showDialog({
-                method: "feed",
-                href: urt_store,
-                name: "Super Radio Ta-Ta",
-                caption: "",
-                description: "Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + '.',
+
+                method: "share",
+                app_id: 1690832551175845,
+                href: app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
+                caption: "Such caption, very feed.",
+                description: "Much description",
                 picture: app.SERVER + 'img/art.jpg'
-            }, function () {
-            })
+
+                }, function () {
+            });
+
+            // facebookConnectPlugin.showDialog({
+            //
+            //     method: "feed",
+            //     link:app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
+            //     caption: "Such caption, very feed."
+            //
+            // }, function () {
+            // });
+
+
+           // window.plugins.socialsharing.share("Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + ' en Super Radio Ta-Ta', "Super Radio Ta-Ta", app.SERVER + 'img/art.jpg', urt_store);
         }
     }
 
 
-
-
-    new Boton($('#home-btn-compartir'), compartir_cancion);
+    new Boton($('#home-btn-fb'), compartir_cancion);
 
 
     new Boton($('#home-btn-info'), function () {

@@ -8,6 +8,7 @@ include '../init.php';
 $app = new \Slim\App;
 
 
+
 $app->get('/current_song', function (Request $request, Response $response) {
 
     $newResponse = $response->withHeader('Content-type', 'text/plain');
@@ -215,12 +216,31 @@ $app->delete('/songs/{id}', function (Request $request, Response $response) {
 
 
 
+
+
 $app->post('/register', function (Request $request, Response $response) {
 
     $allPostPutVars = $request->getParsedBody();
 
-    if (mysql_query('INSERT INTO `usuarios` ( `nombre`, `apellido`, `email`, `sexo`, `edad`, `tel`) VALUES (
 
+    if($allPostPutVars['fbid'] != 0){
+
+        $rs_usu =  mysql_query('SELECT id FROM usuarios WHERE fbid = "' . mysql_real_escape_string($allPostPutVars['fbid']) . '" LIMIT 1');
+        $row_usu = mysql_fetch_object($rs_usu);
+        if(mysql_num_rows($rs_usu)==1){
+            $newResponse = $response->withHeader('Content-type', 'application/json');
+            $newResponse->getBody()->write(json_encode(array('message' => 'Bienvenido nuevamente.', 'accessToken' => md5('vespa' . $row_usu->id))));
+            return $newResponse;
+
+        }
+
+    }
+
+
+
+    if (mysql_query('INSERT INTO `usuarios` ( `fbid`, `nombre`, `apellido`, `email`, `sexo`, `edad`, `tel`) VALUES (
+
+					"' . mysql_real_escape_string($allPostPutVars['fbid']) . '",
 					"' . mysql_real_escape_string($allPostPutVars['nombre']) . '",
                     "' . mysql_real_escape_string($allPostPutVars['apellido']) . '",
 					"' . mysql_real_escape_string($allPostPutVars['email']) . '",
