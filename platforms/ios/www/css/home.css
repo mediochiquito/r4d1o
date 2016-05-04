@@ -100,3 +100,8 @@
     height: 220px;
     top: 42%;
 }
+
+#home-btn-compartir {
+    text-align: center;
+    color: #fff;
+}

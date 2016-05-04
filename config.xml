@@ -75,4 +75,8 @@
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
+    <plugin name="cordova-plugin-facebook4" spec="https://github.com/jeduan/cordova-plugin-facebook4">
+        <variable name="APP_ID" value="1690832551175845" />
+        <variable name="APP_NAME" value="Súper Radio Ta-Ta" />
+    </plugin>
 </widget>

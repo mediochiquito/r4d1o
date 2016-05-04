@@ -245,6 +245,13 @@ module.exports = [
         "clobbers": [
             "device"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-facebook4/www/facebook-native.js",
+        "id": "cordova-plugin-facebook4.FacebookConnectPlugin",
+        "clobbers": [
+            "facebookConnectPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -264,7 +271,8 @@ module.exports.metadata =
     "cordova-plugin-x-toast": "2.5.0",
     "nl.x-services.plugins.backgroundaudio": "1.0.1",
     "cordova-plugin-device": "1.1.1",
-    "cordova-plugin-crosswalk-webview": "1.6.1"
+    "cordova-plugin-crosswalk-webview": "1.6.1",
+    "cordova-plugin-facebook4": "1.7.1"
 };
 // BOTTOM OF METADATA
 });

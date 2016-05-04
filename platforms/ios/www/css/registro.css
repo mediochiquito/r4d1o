@@ -157,3 +157,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .registro-campo-error{border-color: red !IMPORTANT;}
+
+#registro-btn-fb {text-align: center;}
+
+#registro-o {color: #fff;font-weight: 900;text-align: center;font-size: 15px;margin-top: 10px;}

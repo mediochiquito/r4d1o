@@ -51,6 +51,11 @@
         },
         "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.tata.radio"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "1690832551175845",
+            "APP_NAME": "Súper Radio Ta-Ta",
+            "PACKAGE_NAME": "com.tata.radio"
         }
     },
     "dependent_plugins": {}

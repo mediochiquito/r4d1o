@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		01945C9E45464050AE512AF2 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = FC59CB9BF8AB4245AF968B46 /* CDVLogger.m */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
+		0D5907D28BEE4EFDB0587ACE /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191593472EA243BC96544117 /* FBSDKShareKit.framework */; };
 		0DA07CF2905942BCA6137704 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1A48AF8AD4126B0AF7152 /* CDVConnection.m */; };
 		103DC8C17EF049489D90F164 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5FD6B88CCE4D95A1C88965 /* CDVDevice.m */; };
 		13A5A3A00CCE41C7A35FF266 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA6FAA5A1CD4F5DB8673DD7 /* Toast.m */; };
+		14659A1D35AC4B339739DFAE /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 581BD535FFD14F12AC64A465 /* FacebookConnectPlugin.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		2232CB91ACAE4D458CD01653 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 687A8159D51446E68CB4BEA9 /* CDVLocalFilesystem.m */; };
@@ -23,10 +25,13 @@
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
 		3CE5B30D7B7E4E99B7CDDECC /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 74EAB9A45FD945FCAB3A2E8C /* CDVReachability.m */; };
+		40CE540FDF0245A8BDB218F0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3E4E9CF6C84740A307FD5F /* Bolts.framework */; };
 		4313EE3B4DD04F9781D0479D /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F977F66E7E84BD89E9BCE9E /* CDVSplashScreen.m */; };
 		495CE213A0AC48B490242723 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A6418F45D3420882F85208 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4989B5E234E34B4284B9982E /* MNowPlaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F055D3F04941BC86A9BB41 /* MNowPlaying.m */; };
 		66B6CE8B7E32449890ECF2CF /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3344BFECDB4FC7A8ACEC61 /* CDVFile.m */; };
+		6D6CFAAC502647F88D38AC9F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4015CF2811A342C4BFD418FC /* FBSDKCoreKit.framework */; };
+		76B0CD824D7740C78F5A3965 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3807838593724C14A896D998 /* FBSDKLoginKit.framework */; };
 		92993A30A7CC4927AF7CFD3F /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CCB83464B442E2B4E7BF60 /* CDVAssetLibraryFilesystem.m */; };
 		95750125E5394B32A30A3BCD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8209233C416747078F1EE59B /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		99571EA311214D239F46DA52 /* BackgroundAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0A4C894E4BB280F711BC /* BackgroundAudio.m */; };
@@ -60,6 +65,7 @@
 		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TataRadio/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		0569AC747BD348E5BA453007 /* CDVConnection.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVConnection.h; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; };
 		15A1A48AF8AD4126B0AF7152 /* CDVConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
+		191593472EA243BC96544117 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "TataRadio/Plugins/cordova-plugin-facebook4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		193D0A4C894E4BB280F711BC /* BackgroundAudio.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = BackgroundAudio.m; path = "nl.x-services.plugins.backgroundaudio/BackgroundAudio.m"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,10 +87,13 @@
 		344E56C6389F437E98E67407 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVLocalFilesystem.h; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; };
 		34F055D3F04941BC86A9BB41 /* MNowPlaying.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = MNowPlaying.m; path = "cordova-plugin-nowplaying/MNowPlaying.m"; sourceTree = "<group>"; };
 		37A6418F45D3420882F85208 /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3807838593724C14A896D998 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "TataRadio/Plugins/cordova-plugin-facebook4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		4015CF2811A342C4BFD418FC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "TataRadio/Plugins/cordova-plugin-facebook4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		42D700F2A2C84BCE86287E05 /* MRemoteCommand.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = MRemoteCommand.h; path = "cordova-plugin-remotecommand/MRemoteCommand.h"; sourceTree = "<group>"; };
 		432B6636A0C94ED788DBB963 /* BackgroundAudio.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = BackgroundAudio.h; path = "nl.x-services.plugins.backgroundaudio/BackgroundAudio.h"; sourceTree = "<group>"; };
 		48ED915EB8804DFA8468C670 /* CDVVibration.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVVibration.m; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; };
 		4F977F66E7E84BD89E9BCE9E /* CDVSplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; };
+		581BD535FFD14F12AC64A465 /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FacebookConnectPlugin.m; path = "cordova-plugin-facebook4/FacebookConnectPlugin.m"; sourceTree = "<group>"; };
 		596F479DD2FD4F33BBA90E99 /* CDVStatusBar.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; };
 		602281C77DE44B5BB906E3D3 /* CDVStatusBar.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVStatusBar.m; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; };
 		6296FE80A83149A38EDD0DA5 /* Toast.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Toast.h; path = "cordova-plugin-x-toast/Toast.h"; sourceTree = "<group>"; };
@@ -108,12 +117,14 @@
 		AE5FD6B88CCE4D95A1C88965 /* CDVDevice.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; };
 		B556E5BCB6E647838B3B13AE /* Toast+UIView.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Toast+UIView.h"; path = "cordova-plugin-x-toast/Toast+UIView.h"; sourceTree = "<group>"; };
 		B59BCACD21B84AE8A806829A /* CDVSound.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSound.h; path = "cordova-plugin-media/CDVSound.h"; sourceTree = "<group>"; };
+		C776F95706654D65AD87DFDE /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = "cordova-plugin-facebook4/FacebookConnectPlugin.h"; sourceTree = "<group>"; };
 		E344627EA57845A09AAB09A7 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = TataRadio/config.xml; sourceTree = "<group>"; };
 		FC59CB9BF8AB4245AF968B46 /* CDVLogger.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLogger.m; path = "cordova-plugin-console/CDVLogger.m"; sourceTree = "<group>"; };
+		FE3E4E9CF6C84740A307FD5F /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "TataRadio/Plugins/cordova-plugin-facebook4/Bolts.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +137,10 @@
 				E192C0369622473585F27A50 /* CoreTelephony.framework in Frameworks */,
 				495CE213A0AC48B490242723 /* AudioToolbox.framework in Frameworks */,
 				C412E5622E014FD38C12211D /* QuartzCore.framework in Frameworks */,
+				40CE540FDF0245A8BDB218F0 /* Bolts.framework in Frameworks */,
+				6D6CFAAC502647F88D38AC9F /* FBSDKCoreKit.framework in Frameworks */,
+				76B0CD824D7740C78F5A3965 /* FBSDKLoginKit.framework in Frameworks */,
+				0D5907D28BEE4EFDB0587ACE /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +214,10 @@
 				71A17334276245139265716E /* CoreTelephony.framework */,
 				37A6418F45D3420882F85208 /* AudioToolbox.framework */,
 				85311BEB00054D65AC6198C5 /* QuartzCore.framework */,
+				FE3E4E9CF6C84740A307FD5F /* Bolts.framework */,
+				4015CF2811A342C4BFD418FC /* FBSDKCoreKit.framework */,
+				3807838593724C14A896D998 /* FBSDKLoginKit.framework */,
+				191593472EA243BC96544117 /* FBSDKShareKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -258,6 +277,8 @@
 				432B6636A0C94ED788DBB963 /* BackgroundAudio.h */,
 				AE5FD6B88CCE4D95A1C88965 /* CDVDevice.m */,
 				21AA2B7E6BD54B7AA3F9C4E3 /* CDVDevice.h */,
+				581BD535FFD14F12AC64A465 /* FacebookConnectPlugin.m */,
+				C776F95706654D65AD87DFDE /* FacebookConnectPlugin.h */,
 			);
 			name = Plugins;
 			path = TataRadio/Plugins;
@@ -392,6 +413,7 @@
 				13A5A3A00CCE41C7A35FF266 /* Toast.m in Sources */,
 				99571EA311214D239F46DA52 /* BackgroundAudio.m in Sources */,
 				103DC8C17EF049489D90F164 /* CDVDevice.m in Sources */,
+				14659A1D35AC4B339739DFAE /* FacebookConnectPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +437,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Rodolfo Canabal (T6PVDK844N)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolfo Canabal (5S76QH63SA)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -426,7 +455,7 @@
 				INFOPLIST_FILE = "TataRadio/TataRadio-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = TataRadio;
-				PROVISIONING_PROFILE = "1e5e801e-aacb-4a95-9f14-050cb3172565";
+				PROVISIONING_PROFILE = "b99c82b8-e700-4986-b0fc-d7e791b4cf86";
 			};
 			name = Debug;
 		};
@@ -439,15 +468,22 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Rodolfo Canabal (T6PVDK844N)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rodolfo Canabal (5S76QH63SA)";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+					"\"TataRadio/Plugins/cordova-plugin-facebook4\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TataRadio/TataRadio-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "TataRadio/TataRadio-Info.plist";
 				PRODUCT_NAME = TataRadio;
-				PROVISIONING_PROFILE = "1e5e801e-aacb-4a95-9f14-050cb3172565";
+				PROVISIONING_PROFILE = "b99c82b8-e700-4986-b0fc-d7e791b4cf86";
 			};
 			name = Release;
 		};

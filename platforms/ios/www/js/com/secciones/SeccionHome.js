@@ -9,11 +9,13 @@ function SeccionHome() {
     var url_stream = 'http://74.50.111.38/stream/';
     var ecuchando = false;
     var buffereando = false;
-
+    var escuchando_artista = '';
+    var escuchando_cancion = '';
     document.addEventListener("online", onOnline, false);
     document.addEventListener("offline", onOffline, false);
 
-    setTimeout(function (){
+
+    setTimeout(function () {
 
         consultar_cancion_actual();
         iniciarRadio();
@@ -27,6 +29,32 @@ function SeccionHome() {
             iniciarRadio();
         }
     });
+
+
+    function compartir_cancion() {
+
+        if (app.esCordova) {
+
+            var urt_store = "https://play.google.com/store?hl=es";
+            if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
+
+            facebookConnectPlugin.showDialog({
+                method: "feed",
+                href: urt_store,
+                name: "Super Radio Ta-Ta",
+                caption: "",
+                description: "Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + '.',
+                picture: app.SERVER + 'img/art.jpg'
+            }, function () {
+            })
+        }
+    }
+
+
+
+
+    new Boton($('#home-btn-compartir'), compartir_cancion);
+
 
     new Boton($('#home-btn-info'), function () {
         app.secciones.go(app.secciones._SeccionInfo, 300);
@@ -45,7 +73,7 @@ function SeccionHome() {
 
         RemoteCommand.enabled('nextTrack', false);
         RemoteCommand.enabled('previousTrack', false);
-        RemoteCommand.on('play', iniciarRadio)
+        RemoteCommand.on('play', iniciarRadio);
         RemoteCommand.on('pause', detenerRadio);
 
         stream = new Audio(url_stream, onSuccess, onError);
@@ -90,17 +118,15 @@ function SeccionHome() {
 
         $.ajax({
                 method: "GET",
-                cache:false,
+                cache: false,
                 url: app.SERVER + "api/current_song"
 
             })
             .done(function (msg) {
 
 
-
                 setTimeout(consultar_cancion_actual, 3000);
                 setNombreCancion(msg);
-
 
 
             })
@@ -120,6 +146,10 @@ function SeccionHome() {
         $('#home-txt-artista').html(array_artita_cancion[0]);
         $('#home-txt-cancion').html(array_artita_cancion[1]);
 
+
+        escuchando_artista = array_artita_cancion[0];
+        escuchando_cancion = array_artita_cancion[1];
+
         if (app.esCordova && device.platform == "iOS") {
 
             NowPlaying.set({
@@ -133,9 +163,10 @@ function SeccionHome() {
         }
 
         if (app.esCordova && device.platform == "Android") {
-            try{
+            try {
                 navigator.RADIO.setInfo(array_artita_cancion[0], array_artita_cancion[1]);
-            }catch(e){}
+            } catch (e) {
+            }
 
         }
 
@@ -186,7 +217,7 @@ function SeccionHome() {
 
     function iniciarRadio() {
 
-        if(navigator.connection.type == Connection.NONE){
+        if (navigator.connection.type == Connection.NONE) {
             app.alerta("Debes estar conectado a internet para escuchar.");
             return;
         }
@@ -201,8 +232,8 @@ function SeccionHome() {
 
         //ios
         if (app.esCordova && device.platform == "iOS") {
-            stream.load()
-            stream.play()
+            stream.load();
+            stream.play();
             NowPlaying.set({
                 artwork: app.SERVER + 'img/art.jpg',
                 albumTitle: "Cargando...",
