@@ -24,9 +24,6 @@
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.tata.radio"
-        },
         "cordova-plugin-media": {
             "PACKAGE_NAME": "com.tata.radio"
         },

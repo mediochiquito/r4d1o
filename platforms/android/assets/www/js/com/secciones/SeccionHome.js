@@ -52,19 +52,20 @@ function SeccionHome() {
             // var urt_store = "https://play.google.com/store?hl=es";
             // if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
 
-            
-
-            // facebookConnectPlugin.showDialog({
             //
-            //     method: "share",
-            //     app_id: 1690832551175845,
-            //     href: (app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista),
-            //     caption: "Such caption, very feed.",
-            //     description: "Much description",
-            //     picture: app.SERVER + 'img/art.jpg',
-            //     share_native: true
-            // }, function () {
-            // });
+
+
+            facebookConnectPlugin.showDialog({
+
+                method: "share",
+                href: 'https://fb.me/1701520570107043',
+                caption: "Super Radio Ta-Ta",
+                description: "Description Description Description",
+                picture: app.SERVER + 'img/art.jpg'
+
+                }, function () {
+                    
+            });
 
             // facebookConnectPlugin.showDialog({
             //

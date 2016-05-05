@@ -206,15 +206,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-        "id": "cordova-plugin-inappbrowser.inappbrowser",
-        "pluginId": "cordova-plugin-inappbrowser",
-        "clobbers": [
-            "cordova.InAppBrowser.open",
-            "window.open"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-media/www/MediaError.js",
         "id": "cordova-plugin-media.MediaError",
         "pluginId": "cordova-plugin-media",
@@ -312,6 +303,23 @@ module.exports = [
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{}
+{
+    "cordova-plugin-console": "1.0.2",
+    "cordova-plugin-crosswalk-webview": "1.6.1",
+    "cordova-plugin-device": "1.1.1",
+    "cordova-plugin-facebook4": "1.7.1",
+    "cordova-plugin-file": "4.1.1",
+    "cordova-plugin-media": "2.1.0",
+    "cordova-plugin-network-information": "1.2.0",
+    "cordova-plugin-nowplaying": "1.0.0",
+    "cordova-plugin-remotecommand": "1.0.0",
+    "cordova-plugin-splashscreen": "3.1.0",
+    "cordova-plugin-statusbar": "2.1.2",
+    "cordova-plugin-streaming": "1.3.0",
+    "cordova-plugin-vibration": "2.1.0",
+    "cordova-plugin-whitelist": "1.2.1",
+    "cordova-plugin-x-toast": "2.5.0",
+    "nl.x-services.plugins.backgroundaudio": "1.0.1"
+}
 // BOTTOM OF METADATA
 });

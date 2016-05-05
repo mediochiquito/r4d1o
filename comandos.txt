@@ -26,7 +26,10 @@ cordova plugin add /Users/mateo/developer/cordova-plugin
 
 
 
-cordova plugin add cordova-plugin-x-socialsharing
+cordova platform update ios@4.1.0
+
+
+
 
 // otros busquedas
 cordova-plugin-streaming

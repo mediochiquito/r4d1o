@@ -51,9 +51,6 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
     <allow-intent href="market:*" />
     <icon density="ldpi" src="res/icon/android/ldpi.png" />
     <icon density="mdpi" src="res/icon/android/mdpi.png" />

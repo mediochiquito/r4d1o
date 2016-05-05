@@ -56,9 +56,6 @@
         },
         "nl.x-services.plugins.backgroundaudio": {
             "PACKAGE_NAME": "com.tata.radio"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.tata.radio"
         }
     },
     "dependent_plugins": {}

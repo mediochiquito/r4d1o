@@ -32,6 +32,8 @@ function SeccionHome() {
 
 
     function compartir_cancion() {
+
+     
         if (app.esCordova) {
 
             // facebookConnectPlugin.showDialog({
@@ -53,16 +55,14 @@ function SeccionHome() {
             // if (device.platform == "iOS") urt_store = "https://itunes.apple.com/es/genre/ios/id36?mt=8";
 
             //
+
             facebookConnectPlugin.showDialog({
 
                 method: "share",
-                app_id: 1690832551175845,
-                href: app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
-                caption: "Such caption, very feed.",
-                description: "Much description",
-                picture: app.SERVER + 'img/art.jpg'
-
+                href: encodeURI(app.SERVER  + '?c=' + escuchando_cancion + '&a=' + escuchando_artista),
+            
                 }, function () {
+
             });
 
             // facebookConnectPlugin.showDialog({

@@ -7,6 +7,7 @@
             <intent-filter android:label="@string/launcher_name">
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="radiotata" />
             </intent-filter>
         </activity>
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/fb_app_id" />
