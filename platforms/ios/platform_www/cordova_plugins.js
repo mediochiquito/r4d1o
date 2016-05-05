@@ -17,6 +17,14 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-customurlscheme/www/ios/LaunchMyApp.js",
+        "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+        "pluginId": "cordova-plugin-customurlscheme",
+        "clobbers": [
+            "window.plugins.launchmyapp"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "pluginId": "cordova-plugin-device",
@@ -305,7 +313,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-console": "1.0.2",
-    "cordova-plugin-crosswalk-webview": "1.6.1",
+    "cordova-plugin-customurlscheme": "4.1.5",
     "cordova-plugin-device": "1.1.1",
     "cordova-plugin-facebook4": "1.7.1",
     "cordova-plugin-file": "4.1.1",

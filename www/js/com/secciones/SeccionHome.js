@@ -59,20 +59,11 @@ function SeccionHome() {
             facebookConnectPlugin.showDialog({
 
                 method: "share",
-                href: encodeURI(app.SERVER  + '?c=' + escuchando_cancion + '&a=' + escuchando_artista),
-            
+                href: encodeURI(app.SERVER  + '?c=' + escuchando_cancion + '&a=' + escuchando_artista)
+
                 }, function () {
 
             });
-
-            // facebookConnectPlugin.showDialog({
-            //
-            //     method: "feed",
-            //     link:app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
-            //     caption: "Such caption, very feed."
-            //
-            // }, function () {
-            // });
 
 
            // window.plugins.socialsharing.share("Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + ' en Super Radio Ta-Ta', "Super Radio Ta-Ta", app.SERVER + 'img/art.jpg', urt_store);

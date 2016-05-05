@@ -10,7 +10,8 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "superradiotata",
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-device": {

@@ -38,6 +38,7 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+    min-height: 450px;
 }
 #secciones{
     position: absolute;

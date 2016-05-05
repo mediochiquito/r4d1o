@@ -97,6 +97,16 @@
             },
             "*-Info.plist": {
                 "parents": {
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>superradiotata</string></array></dict></array>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1690832551175845</string></array></dict></array>",
+                            "count": 1
+                        }
+                    ],
                     "FacebookAppID": [
                         {
                             "xml": "<string>1690832551175845</string>",
@@ -106,12 +116,6 @@
                     "FacebookDisplayName": [
                         {
                             "xml": "<string>Súper Radio Ta-Ta</string>",
-                            "count": 1
-                        }
-                    ],
-                    "CFBundleURLTypes": [
-                        {
-                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb1690832551175845</string></array></dict></array>",
                             "count": 1
                         }
                     ],
@@ -141,7 +145,8 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.tata.radio"
         },
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-customurlscheme": {
+            "URL_SCHEME": "superradiotata",
             "PACKAGE_NAME": "com.tata.radio"
         },
         "cordova-plugin-device": {
@@ -205,6 +210,14 @@
             "pluginId": "cordova-plugin-console",
             "clobbers": [
                 "cordova.logger"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-customurlscheme/www/ios/LaunchMyApp.js",
+            "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+            "pluginId": "cordova-plugin-customurlscheme",
+            "clobbers": [
+                "window.plugins.launchmyapp"
             ]
         },
         {
@@ -494,7 +507,7 @@
     ],
     "plugin_metadata": {
         "cordova-plugin-console": "1.0.2",
-        "cordova-plugin-crosswalk-webview": "1.6.1",
+        "cordova-plugin-customurlscheme": "4.1.5",
         "cordova-plugin-device": "1.1.1",
         "cordova-plugin-facebook4": "1.7.1",
         "cordova-plugin-file": "4.1.1",

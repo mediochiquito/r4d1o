@@ -1,6 +1,13 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
+        "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+        "clobbers": [
+            "window.plugins.launchmyapp"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
         "clobbers": [
@@ -258,7 +265,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-console": "1.0.2",
-    "cordova-plugin-crosswalk-webview": "1.6.1",
+    "cordova-plugin-customurlscheme": "4.1.5",
     "cordova-plugin-device": "1.1.1",
     "cordova-plugin-facebook4": "1.7.1",
     "cordova-plugin-file": "4.1.1",

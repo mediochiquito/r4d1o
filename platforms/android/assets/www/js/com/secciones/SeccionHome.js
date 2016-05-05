@@ -32,6 +32,8 @@ function SeccionHome() {
 
 
     function compartir_cancion() {
+
+     
         if (app.esCordova) {
 
             // facebookConnectPlugin.showDialog({
@@ -54,27 +56,14 @@ function SeccionHome() {
 
             //
 
-
             facebookConnectPlugin.showDialog({
 
                 method: "share",
-                href: 'https://fb.me/1701520570107043',
-                caption: "Super Radio Ta-Ta",
-                description: "Description Description Description",
-                picture: app.SERVER + 'img/art.jpg'
+                href: encodeURI(app.SERVER  + '?c=' + escuchando_cancion + '&a=' + escuchando_artista)
 
                 }, function () {
-                    
-            });
 
-            // facebookConnectPlugin.showDialog({
-            //
-            //     method: "feed",
-            //     link:app.SERVER + '?c='+escuchando_cancion + '&a=' + escuchando_artista,
-            //     caption: "Such caption, very feed."
-            //
-            // }, function () {
-            // });
+            });
 
 
            // window.plugins.socialsharing.share("Estoy escuchando " + escuchando_cancion + ' por ' + escuchando_artista + ' en Super Radio Ta-Ta', "Super Radio Ta-Ta", app.SERVER + 'img/art.jpg', urt_store);

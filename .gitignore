@@ -1,2 +1,3 @@
 certs/radiotata-my-release-key.keystore
-platforms/
+platforms/*
+server/*

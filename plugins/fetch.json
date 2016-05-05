@@ -112,14 +112,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-crosswalk-webview": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-crosswalk-webview"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-facebook4": {
         "source": {
             "type": "git",
@@ -130,6 +122,16 @@
         "variables": {
             "APP_ID": "1690832551175845",
             "APP_NAME": "Súper Radio Ta-Ta"
+        }
+    },
+    "cordova-plugin-customurlscheme": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-customurlscheme"
+        },
+        "is_top_level": true,
+        "variables": {
+            "URL_SCHEME": "superradiotata"
         }
     }
 }
